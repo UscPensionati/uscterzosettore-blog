@@ -42,6 +42,99 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
+
+        <link rel="canonical" href="{{ .Permalink }}">
+    
+    <!-- Google Analytics 4 - Privacy Compliant -->
+    {{ if not hugo.IsServer }}
+      {{ with .Site.Params.google_analytics }}
+      
+      <!-- Google Tag Manager / GA4 -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+      <script>
+        // Initialize dataLayer
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        // Set initial timestamp
+        gtag('js', new Date());
+        
+        // GDPR/Cookie Consent - Default DENIED
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied', 
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied',
+          'functionality_storage': 'denied',
+          'personalization_storage': 'denied',
+          'security_storage': 'granted'  // Always granted for security
+        });
+        
+        // Configure GA4 with privacy settings
+        gtag('config', 'G-7XY2JTE4PN', {
+          // Privacy Protection
+          'anonymize_ip': true,
+          'allow_google_signals': false,
+          'allow_ad_personalization_signals': false,
+          'restricted_data_processing': true,
+          
+          // Enhanced Ecommerce (disabled for privacy)
+          'send_page_view': true,
+          'page_title': '{{ .Title }}',
+          'page_location': '{{ .Permalink }}',
+          
+          // Custom Parameters for Blog
+          'custom_map': {
+            'dimension1': 'page_category',
+            'dimension2': 'author', 
+            'dimension3': 'publish_date'
+          },
+          
+          // Set custom dimensions
+          'page_category': '{{ with .Params.category }}{{ . }}{{ else }}{{ .Type }}{{ end }}',
+          'author': '{{ with .Params.author }}{{ . }}{{ else }}Redazione USC{{ end }}',
+          'publish_date': '{{ .Date.Format "2006-01-02" }}'
+        });
+        
+        // Track page view manually after consent
+        function trackPageView() {
+          gtag('event', 'page_view', {
+            'page_title': '{{ .Title }}',
+            'page_location': '{{ .Permalink }}',
+            'page_category': '{{ with .Params.category }}{{ . }}{{ else }}{{ .Type }}{{ end }}',
+            'content_group1': '{{ .Type }}',
+            'content_group2': '{{ with .Params.category }}{{ . }}{{ else }}General{{ end }}'
+          });
+        }
+        
+        // Check for existing consent on page load
+        document.addEventListener('DOMContentLoaded', function() {
+          const cookieConsent = getCookieValue('cookie-consent');
+          if (cookieConsent === 'all') {
+            // User previously accepted all cookies
+            gtag('consent', 'update', {
+              'analytics_storage': 'granted',
+              'functionality_storage': 'granted'
+            });
+            trackPageView();
+          }
+        });
+        
+        // Utility function to get cookie (needed here before main.js loads)
+        function getCookieValue(name) {
+          const nameEQ = name + "=";
+          const ca = document.cookie.split(';');
+          for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+        }
+      </script>
+      
+      {{ end }}
+    {{ end }}
     
     {{ block "head" . }}{{ end }}
 </head>

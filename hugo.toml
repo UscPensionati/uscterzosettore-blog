@@ -52,12 +52,19 @@ relativeURLs = false
   convertkit_form_uid = '' # Da configurare con ConvertKit
   
   # Analytics
-  google_analytics = '' # Da configurare con Google Analytics
+  google_analytics = 'G-7XY2JTE4PN'
   
   # Features
   show_reading_time = true
   show_share_buttons = true
   show_related_posts = true
+
+  [params.analytics]
+    google_analytics_4 = true
+    anonymize_ip = true
+    disable_advertising = true  
+    disable_demographics = true
+    cookie_consent_required = true
   
   # SEO
   [params.seo]
@@ -94,6 +101,17 @@ relativeURLs = false
     name = 'Contatti'
     url = '/contatti/'
     weight = 20
+
+  [[menu.footer]]
+    name = 'Privacy Policy'
+    url = '/privacy/'
+    weight = 10
+  
+  [[menu.footer]]
+    name = 'Cookie Policy'  
+    url = '/cookie-policy/'
+    weight = 15
+  
 
 # Markup configuration
 [markup]
