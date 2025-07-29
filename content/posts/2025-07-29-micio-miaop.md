@@ -1,7 +1,8 @@
-﻿---
-title: micio miaop
+---
+title: Test post 02
 date: 2025-07-29T13:53:00+02:00
-categories: ["Tutela Legale"]
+categories:
+  - Tutela Legale
 cover:
   image: https://cdn.pixabay.com/photo/2024/11/18/10/20/businessman-9205819_1280.png
 description: >-
