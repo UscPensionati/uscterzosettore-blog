@@ -1,0 +1,161 @@
+﻿{{ define "main" }}
+<div class="homepage-container">
+  {{ $latestPost := index (where .Site.RegularPages "Type" "posts") 0 }} {{ if
+  $latestPost }}
+  <section class="latest-post-hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        {{ with $latestPost.Params.cover }}
+        <img
+          src="{{ .image }}"
+          alt="{{ .alt | default $latestPost.Title }}"
+          loading="lazy"
+        />
+        {{ else }}
+        <div class="hero-image-placeholder">
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"
+            />
+            <circle cx="12" cy="13" r="3" />
+          </svg>
+          <span>USC</span>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="hero-text">
+        <div class="hero-meta">
+          <span class="hero-label">LATEST</span>
+          <span class="hero-date"
+            >{{ $latestPost.Date.Format "2 JAN 2006" }}</span
+          >
+          {{ with $latestPost.Params.categories }}
+          <span class="hero-category">{{ index . 0 }}</span>
+          {{ end }}
+        </div>
+
+        <h1 class="hero-title">
+          <a href="{{ $latestPost.Permalink }}">{{ $latestPost.Title }}</a>
+        </h1>
+
+        <div class="hero-excerpt">
+          {{ if $latestPost.Params.description }}
+          <p>{{ $latestPost.Params.description }}</p>
+          {{ else if $latestPost.Summary }}
+          <p>{{ $latestPost.Summary }}</p>
+          {{ end }}
+        </div>
+
+        <div class="hero-footer">
+          <div class="hero-author">
+            {{ $latestPost.Params.author | default "Redazione USC" }}
+          </div>
+          <div class="hero-reading-time">
+            {{ $readingTime := div $latestPost.WordCount 200 }} {{ if lt
+            $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} MIN READ
+          </div>
+          <a href="{{ $latestPost.Permalink }}" class="hero-read-more">
+            Leggi tutto →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="more-posts-section">
+    <div class="section-header">
+      <h2 class="section-title">MORE ISSUES</h2>
+      <div class="section-subtitle">
+        Additional issues will be published soon.
+      </div>
+    </div>
+
+    {{ $posts := where .Site.RegularPages "Type" "posts" }} {{ if gt (len
+    $posts) 1 }}
+    <div class="posts-grid">
+      {{ range first 3 (after 1 $posts) }}
+      <article class="post-card">
+        <div class="post-card-content">
+          <div class="post-card-meta">
+            {{ with .Params.categories }}
+            <span class="post-card-category">{{ index . 0 }}</span>
+            {{ end }}
+            <span class="post-card-date">{{ .Date.Format "2 Jan 2006" }}</span>
+          </div>
+
+          <h3 class="post-card-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+
+          {{ if .Params.description }}
+          <p class="post-card-excerpt">{{ .Params.description }}</p>
+          {{ else if .Summary }}
+          <p class="post-card-excerpt">{{ .Summary }}</p>
+          {{ end }}
+
+          <div class="post-card-footer">
+            <span class="post-card-author">
+              {{ .Params.author | default "Redazione USC" }}
+            </span>
+            <span class="post-card-reading-time">
+              {{ $readingTime := div .WordCount 200 }} {{ if lt $readingTime 1
+              }}1{{ else }}{{ $readingTime }}{{ end }} min read
+            </span>
+          </div>
+        </div>
+
+        {{ with .Params.cover }}
+        <div class="post-card-image">
+          <a href="{{ $.Permalink }}">
+            <img src="{{ .image }}" alt="{{ $.Title }}" loading="lazy" />
+          </a>
+        </div>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+
+  <aside class="homepage-sidebar">
+    <div class="about-card">
+      <h3 class="about-title">ABOUT</h3>
+      <div class="about-content">
+        <div class="about-logo">
+          <img src="/images/logo-usc.jpg" alt="USC" class="about-logo-img" />
+          <h4>USC Ente del Terzo Settore</h4>
+        </div>
+
+        <p class="about-description">
+          USC è un'associazione del Terzo Settore impegnata a offrire servizi di
+          qualità a tutti coloro che si trovano in condizioni di difficoltà o
+          svantaggio. Attraverso un approccio inclusivo e solidale.
+        </p>
+
+        <div class="about-cta">
+          <p>
+            Sign up now to get access to the library of members-only issues.
+          </p>
+          <div class="newsletter-signup-mini">
+            <input
+              type="email"
+              placeholder="jamie@example.com"
+              class="mini-email-input"
+            />
+            <button class="mini-subscribe-btn">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+{{ end }}

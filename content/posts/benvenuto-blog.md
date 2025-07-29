@@ -17,7 +17,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-    image: "/images/welcome-cover.jpg"
+    image: "/images/logo-usc.png"
     alt: "Benvenuti nel blog USC"
     caption: "Il nuovo punto di riferimento per il terzo settore"
 ---

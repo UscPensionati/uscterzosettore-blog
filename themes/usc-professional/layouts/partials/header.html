@@ -1,0 +1,92 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="header-nav">
+            <div class="header-logo">
+
+                <div class="site-logo">
+                    <a href="{{ " /" | relURL }}" title="{{ .Site.Title }}">
+                        <img src="/images/logo-usc.jpg" alt="USC" class="logo-img">
+                    </a>
+                </div>
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Search Icon (future implementation) -->
+                    <!-- <button class="search-toggle" aria-label="Cerca">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="M21 21l-4.35-4.35"></path>
+                </svg>
+            </button> -->
+
+                    <!-- Newsletter Subscribe Button -->
+                    <a href="#newsletter" class="subscribe-btn">
+                        SUBSCRIBE
+                    </a>
+
+                    <!-- Admin Login (visible only to authenticated users) -->
+                    {{ if hugo.IsServer }}
+                    <a href="/admin/" class="admin-link" target="_blank">
+                        ADMIN
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div>
+                <nav class="main-navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="{{ "/" | relURL }}" class="nav-link {{ if .IsHome }}active{{ end }}">
+                                HOME
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="{{ "/categories/" | relURL }}" class="nav-link dropdown-toggle">
+                                CATEGORIE
+                                <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            {{ partial "categories-dropdown.html" . }}
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ "/chi-siamo/" | relURL }}" class="nav-link {{ if eq .Section " chi-siamo"
+                                }}active{{ end }}">
+                                CHI SIAMO
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-navigation">
+    <ul class="mobile-nav-menu">
+        <li><a href="{{ " /" | relURL }}">HOME</a></li>
+        <li class="mobile-dropdown">
+            <a href="{{ " /categories/" | relURL }}">CATEGORIE</a>
+            <ul class="mobile-dropdown-menu">
+                {{ range .Site.Taxonomies.categories }}
+                <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+                {{ end }}
+            </ul>
+        </li>
+        <li><a href="{{ " /chi-siamo/" | relURL }}">CHI SIAMO</a></li>
+        <li><a href="#newsletter" class="mobile-subscribe">ISCRIVITI</a></li>
+    </ul>
+</nav>

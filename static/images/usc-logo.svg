@@ -1,0 +1,14 @@
+﻿<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo USC Placeholder -->
+  <defs>
+    <style>
+      .logo-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="120" height="40" fill="#000000" rx="4"/>
+  
+  <!-- USC Text -->
+  <text x="60" y="28" text-anchor="middle" class="logo-text" font-size="20" fill="#ffffff">USC</text>
+</svg>

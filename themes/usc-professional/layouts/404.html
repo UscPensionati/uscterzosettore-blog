@@ -1,0 +1,373 @@
+{{ define "main" }}
+<div class="error-404-container">
+    <div class="error-404-content">
+        
+        <!-- 404 Icon -->
+        <div class="error-404-icon">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16 16s-1.5-2-4-2-4 2-4 2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+        </div>
+        
+        <!-- 404 Message -->
+        <div class="error-404-message">
+            <h1 class="error-404-title">Pagina non trovata</h1>
+            <p class="error-404-description">
+                La pagina che stai cercando non esiste più o è stata spostata. 
+                Verifica l'URL o torna alla homepage per continuare la navigazione.
+            </p>
+        </div>
+        
+        <!-- Navigation Options -->
+        <div class="error-404-actions">
+            <a href="{{ "/" | relURL }}" class="error-404-btn primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                Torna alla Homepage
+            </a>
+            
+            <button onclick="history.back()" class="error-404-btn secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5"/>
+                    <path d="M12 19l-7-7 7-7"/>
+                </svg>
+                Torna Indietro
+            </button>
+        </div>
+        
+        <!-- Search Suggestion -->
+        <div class="error-404-search">
+            <p class="search-suggestion">Oppure prova a cercare quello che ti interessa:</p>
+            <form class="search-form" action="/search" method="get">
+                <div class="search-input-wrapper">
+                    <input type="search" name="q" placeholder="Cerca nel blog..." class="search-input" required>
+                    <button type="submit" class="search-submit" aria-label="Cerca">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Popular Content -->
+        <div class="error-404-popular">
+            <h3 class="popular-title">Contenuti Popolari</h3>
+            <div class="popular-links">
+                {{ $categories := slice "Agricoltura Sociale" "Tutela Legale" "Assistenza Sanitaria" "Patronato" "Giovani Idee" "Donazioni" }}
+                {{ range $categories }}
+                    {{ $categorySlug := . | urlize }}
+                    {{ $categoryCount := len (where $.Site.RegularPages "Params.category" .) }}
+                    {{ if gt $categoryCount 0 }}
+                    <a href="{{ printf "/categories/%s/" $categorySlug | relURL }}" class="popular-link">
+                        {{ . }}
+                        <span class="popular-count">({{ $categoryCount }})</span>
+                    </a>
+                    {{ end }}
+                {{ end }}
+                
+                <a href="{{ "/chi-siamo/" | relURL }}" class="popular-link">
+                    Chi Siamo
+                </a>
+                
+                <a href="{{ "/posts/" | relURL }}" class="popular-link">
+                    Tutti gli Articoli
+                </a>
+            </div>
+        </div>
+        
+        <!-- Recent Posts -->
+        {{ $recentPosts := first 3 (where .Site.RegularPages "Type" "posts") }}
+        {{ if $recentPosts }}
+        <div class="error-404-recent">
+            <h3 class="recent-title">Articoli Recenti</h3>
+            <div class="recent-posts">
+                {{ range $recentPosts }}
+                <article class="recent-post">
+                    <div class="recent-post-content">
+                        <h4 class="recent-post-title">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h4>
+                        <div class="recent-post-meta">
+                            <span class="recent-post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+                            {{ if .Params.category }}
+                            <span class="recent-post-category">{{ .Params.category }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ if .Params.featured_image }}
+                    <div class="recent-post-image">
+                        <a href="{{ .Permalink }}">
+                            <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+                        </a>
+                    </div>
+                    {{ end }}
+                </article>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+        
+        <!-- Contact Info -->
+        <div class="error-404-contact">
+            <p class="contact-suggestion">
+                Se pensi che ci sia un problema, puoi 
+                <a href="mailto:{{ .Site.Params.email | default "info@uscterzosettore.it" }}">contattarci</a> 
+                per segnalarlo.
+            </p>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+.error-404-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-16) var(--container-padding);
+    text-align: center;
+}
+
+.error-404-icon {
+    color: var(--color-light);
+    margin-bottom: var(--space-8);
+}
+
+.error-404-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.error-404-description {
+    font-size: var(--text-lg);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-8);
+}
+
+.error-404-actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    margin-bottom: var(--space-12);
+    flex-wrap: wrap;
+}
+
+.error-404-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-md);
+    font-weight: var(--weight-medium);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border: none;
+    cursor: pointer;
+    font-size: var(--text-base);
+}
+
+.error-404-btn.primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.error-404-btn.primary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+}
+
+.error-404-btn.secondary {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+}
+
+.error-404-btn.secondary:hover {
+    background-color: var(--color-hover);
+}
+
+.error-404-search {
+    margin-bottom: var(--space-12);
+}
+
+.search-suggestion {
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.search-input-wrapper {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-bg);
+}
+
+.search-input {
+    flex: 1;
+    padding: var(--space-4);
+    border: none;
+    font-size: var(--text-base);
+    background: transparent;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-submit {
+    padding: var(--space-4);
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.search-submit:hover {
+    background-color: var(--color-secondary);
+}
+
+.error-404-popular,
+.error-404-recent {
+    margin-bottom: var(--space-12);
+    text-align: left;
+}
+
+.popular-title,
+.recent-title {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-6);
+    text-align: center;
+}
+
+.popular-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+}
+
+.popular-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: all var(--transition-fast);
+}
+
+.popular-link:hover {
+    background-color: var(--color-hover);
+    color: var(--color-secondary);
+}
+
+.popular-count {
+    color: var(--color-light);
+    font-size: var(--text-xs);
+}
+
+.recent-posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.recent-post {
+    display: flex;
+    gap: var(--space-4);
+    align-items: start;
+}
+
+.recent-post-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.recent-post-title {
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    margin-bottom: var(--space-2);
+}
+
+.recent-post-title a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.recent-post-title a:hover {
+    color: var(--color-secondary);
+}
+
+.recent-post-meta {
+    display: flex;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--color-light);
+}
+
+.recent-post-image {
+    width: 80px;
+    height: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+}
+
+.recent-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.error-404-contact {
+    font-size: var(--text-sm);
+    color: var(--color-secondary);
+}
+
+.error-404-contact a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .error-404-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .error-404-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .recent-post {
+        flex-direction: column;
+    }
+    
+    .recent-post-image {
+        width: 100%;
+        height: 120px;
+    }
+}
+</style>
+{{ end }}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "it" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    {{ block "title" . }}
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ end }}
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author | default "USC Ente del Terzo Settore" }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    {{ with .Params.featured_image }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    
+    <!-- RSS -->
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    {{ block "head" . }}{{ end }}
+</head>
+<body class="{{ if .IsHome }}home{{ else }}{{ .Type }}{{ end }}">
+    
+    {{ partial "header.html" . }}
+    
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+    
+    <!-- JavaScript -->
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    
+    {{ block "scripts" . }}{{ end }}
+    
+    <!-- Netlify Identity for Decap CMS -->
+    {{ if hugo.IsServer }}
+    {{ else }}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    {{ end }}
+</body>
+</html>

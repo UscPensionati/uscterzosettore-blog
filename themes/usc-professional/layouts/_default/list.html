@@ -1,0 +1,231 @@
+{{ define "main" }}
+<div class="list-page-container">
+    
+    <!-- Page Header -->
+    <header class="list-header">
+        <div class="list-breadcrumbs">
+            <a href="{{ "/" | relURL }}">Home</a>
+            {{ if eq .Type "categories" }}
+            <span class="breadcrumb-separator">→</span>
+            <span>Categorie</span>
+            {{ if .Title }}
+            <span class="breadcrumb-separator">→</span>
+            <span>{{ .Title }}</span>
+            {{ end }}
+            {{ else if eq .Type "posts" }}
+            <span class="breadcrumb-separator">→</span>
+            <span>Tutti gli Articoli</span>
+            {{ end }}
+        </div>
+        
+        <h1 class="list-title">
+            {{ if eq .Type "categories" }}
+                {{ if .Title }}
+                    Categoria: {{ .Title }}
+                {{ else }}
+                    Tutte le Categorie
+                {{ end }}
+            {{ else if eq .Type "posts" }}
+                Tutti gli Articoli
+            {{ else }}
+                {{ .Title }}
+            {{ end }}
+        </h1>
+        
+        {{ if .Description }}
+        <p class="list-description">{{ .Description }}</p>
+        {{ else if eq .Type "categories" }}
+            {{ if .Title }}
+            <p class="list-description">
+                Tutti gli articoli nella categoria <strong>{{ .Title }}</strong>.
+            </p>
+            {{ else }}
+            <p class="list-description">
+                Esplora tutti i nostri contenuti organizzati per categoria.
+            </p>
+            {{ end }}
+        {{ else if eq .Type "posts" }}
+        <p class="list-description">
+            Tutti gli articoli pubblicati sul blog di USC Ente del Terzo Settore.
+        </p>
+        {{ end }}
+        
+        <!-- Post Count -->
+        {{ if .Paginator }}
+        <div class="list-meta">
+            {{ $totalPosts := .Paginator.TotalNumberOfElements }}
+            <span class="post-count">{{ $totalPosts }} {{ if eq $totalPosts 1 }}articolo{{ else }}articoli{{ end }}</span>
+            {{ if gt .Paginator.TotalPages 1 }}
+            <span class="page-info">Pagina {{ .Paginator.PageNumber }} di {{ .Paginator.TotalPages }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+    
+    <!-- Categories Grid (if on categories index) -->
+    {{ if and (eq .Type "categories") (not .Title) }}
+    <section class="categories-grid">
+        {{ $categories := slice "Agricoltura Sociale" "Tutela Legale" "Assistenza Sanitaria" "Patronato" "Giovani Idee" "Donazioni" "News" }}
+        {{ range $categories }}
+            {{ $categorySlug := . | urlize }}
+            {{ $categoryPosts := where $.Site.RegularPages "Params.category" . }}
+            {{ $categoryCount := len $categoryPosts }}
+            {{ if gt $categoryCount 0 }}
+            <div class="category-card">
+                <a href="{{ printf "/categories/%s/" $categorySlug | relURL }}" class="category-card-link">
+                    <div class="category-card-content">
+                        <h3 class="category-card-title">{{ . }}</h3>
+                        <p class="category-card-count">
+                            {{ $categoryCount }} {{ if eq $categoryCount 1 }}articolo{{ else }}articoli{{ end }}
+                        </p>
+                        <div class="category-card-posts">
+                            {{ range first 3 $categoryPosts }}
+                            <div class="category-card-post">
+                                <span class="post-title-preview">{{ .Title }}</span>
+                                <span class="post-date-preview">{{ .Date.Format "2 Jan 2006" }}</span>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <div class="category-card-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        {{ end }}
+    </section>
+    
+    <!-- All Posts Section -->
+    {{ $allPosts := where .Site.RegularPages "Type" "posts" }}
+    {{ if $allPosts }}
+    <section class="all-posts-section">
+        <h2 class="section-title">Tutti gli Articoli</h2>
+        <div class="posts-preview-grid">
+            {{ range first 6 $allPosts }}
+            <article class="post-preview-card">
+                {{ if .Params.featured_image }}
+                <div class="post-preview-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+                    </a>
+                </div>
+                {{ end }}
+                <div class="post-preview-content">
+                    <div class="post-preview-meta">
+                        {{ if .Params.category }}
+                        <span class="post-preview-category">{{ .Params.category }}</span>
+                        {{ end }}
+                        <span class="post-preview-date">{{ .Date.Format "2 Jan 2006" }}</span>
+                    </div>
+                    <h3 class="post-preview-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    {{ if .Params.excerpt }}
+                    <p class="post-preview-excerpt">{{ .Params.excerpt }}</p>
+                    {{ else if .Summary }}
+                    <p class="post-preview-excerpt">{{ .Summary }}</p>
+                    {{ end }}
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        <div class="view-all-posts">
+            <a href="{{ "/posts/" | relURL }}" class="view-all-link">
+                Vedi tutti gli articoli →
+            </a>
+        </div>
+    </section>
+    {{ end }}
+    
+    {{ else }}
+    
+    <!-- Posts List -->
+    {{ if .Paginator.Pages }}
+    <section class="posts-list">
+        {{ range .Paginator.Pages }}
+        <article class="post-list-item">
+            <div class="post-list-content">
+                <div class="post-list-meta">
+                    {{ if .Params.category }}
+                    <span class="post-list-category">{{ .Params.category }}</span>
+                    {{ end }}
+                    <span class="post-list-date">{{ .Date.Format "2 JANUARY 2006" }}</span>
+                </div>
+                
+                <h2 class="post-list-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                
+                {{ if .Params.excerpt }}
+                <p class="post-list-excerpt">{{ .Params.excerpt }}</p>
+                {{ else if .Summary }}
+                <p class="post-list-excerpt">{{ .Summary }}</p>
+                {{ end }}
+                
+                <div class="post-list-footer">
+                    <span class="post-list-author">
+                        {{ if .Params.author }}{{ .Params.author }}{{ else }}Redazione USC{{ end }}
+                    </span>
+                    <span class="post-list-reading-time">
+                        {{ $wordCount := .WordCount }}
+                        {{ $readingTime := div $wordCount 200 }}
+                        {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} min read
+                    </span>
+                    {{ if .Params.tags }}
+                    <div class="post-list-tags">
+                        {{ range first 3 .Params.tags }}
+                        <span class="post-list-tag">#{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            
+            {{ if .Params.featured_image }}
+            <div class="post-list-image">
+                <a href="{{ .Permalink }}">
+                    <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+                </a>
+            </div>
+            {{ end }}
+        </article>
+        {{ end }}
+    </section>
+    
+    <!-- Pagination -->
+    {{ template "_internal/pagination.html" . }}
+    
+    {{ else }}
+    
+    <!-- No Posts Message -->
+    <div class="no-posts-message">
+        <div class="no-posts-content">
+            <h2>Nessun articolo trovato</h2>
+            {{ if eq .Type "categories" }}
+            <p>Non ci sono ancora articoli in questa categoria.</p>
+            {{ else }}
+            <p>Non ci sono articoli da mostrare al momento.</p>
+            {{ end }}
+            <a href="{{ "/" | relURL }}" class="back-home-link">
+                ← Torna alla Homepage
+            </a>
+        </div>
+    </div>
+    
+    {{ end }}
+    {{ end }}
+    
+    <!-- Newsletter CTA -->
+    <section class="list-newsletter-cta">
+        <div class="newsletter-cta-content">
+            <h3>Resta aggiornato</h3>
+            <p>Iscriviti alla nostra newsletter per non perdere nessun aggiornamento dal mondo del terzo settore.</p>
+            {{ partial "newsletter-form.html" . }}
+        </div>
+    </section>
+    
+</div>
+{{ end }}

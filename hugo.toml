@@ -1,100 +1,179 @@
 baseURL = 'https://uscterzosettore.it'
 languageCode = 'it-it'
 title = 'USC Ente del Terzo Settore'
-theme = 'PaperMod'
+theme = 'usc-professional'
 
-enableRobotsTXT = true
+# Content settings
+defaultContentLanguage = 'it'
+hasCJKLanguage = false
+enableEmoji = true
+enableGitInfo = true
+
+# Build settings
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-enableEmoji = true
 
-[minify]
-  disableXML = true
-  minifyOutput = true
+# Output formats
+enableRobotsTXT = true
+canonifyURLs = false
+relativeURLs = false
 
+# Pagination
+[pagination]
+  pagerSize = 10
+  path = "pagina"
+
+# Taxonomies
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# Permalinks
+[permalinks]
+  posts = '/posts/:year/:month/:slug/'
+  categories = '/categories/:slug/'
+
+# Site parameters
 [params]
-  env = "production"
-  title = "USC Ente del Terzo Settore"
-  description = "Notizie, insights e aggiornamenti dal mondo del terzo settore"
-  keywords = ["terzo settore", "no-profit", "volontariato"]
-  author = "USC Team"
-  DateFormat = "January 2, 2006"
-  defaultTheme = "auto"
-  disableThemeToggle = false
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  comments = false
-  hidemeta = false
-  hideSummary = false
-  showtoc = false
-  tocopen = false
+  description = 'Blog ufficiale USC Ente del Terzo Settore - Notizie, approfondimenti e risorse dal mondo del terzo settore italiano'
+  author = 'USC Ente del Terzo Settore'
+  
+  # Contact info
+  email = 'info@uscterzosettore.it'
+  phone = '+39 06 0000 0000'
+  address = 'Via del Castro Pretorio, 30, 00185 Roma, Italia'
+  
+  # Social media
+  linkedin = 'https://linkedin.com/company/usc-terzo-settore'
+  
+  # Newsletter
+  newsletter_signup = true
+  convertkit_form_uid = '' # Da configurare con ConvertKit
+  
+  # Analytics
+  google_analytics = '' # Da configurare con Google Analytics
+  
+  # Features
+  show_reading_time = true
+  show_share_buttons = true
+  show_related_posts = true
+  
+  # SEO
+  [params.seo]
+    meta_description_length = 160
+    meta_og_image = '/images/usc-og-image.jpg'
 
-  [params.assets]
-    favicon = "/favicon.ico"
-    favicon16x16 = "/favicon-16x16.png"
-    favicon32x32 = "/favicon-32x32.png"
-    apple_touch_icon = "/apple-touch-icon.png"
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = 10
+    
+  [[menu.main]]
+    identifier = 'categories'
+    name = 'Categorie'
+    url = '/categories/'
+    weight = 20
+    
+  [[menu.main]]
+    identifier = 'chi-siamo'
+    name = 'Chi Siamo'
+    url = '/chi-siamo/'
+    weight = 30
 
-  [params.homeInfoParams]
-    Title = "USC Ente del Terzo Settore"
-    Content = "Benvenuti nel nostro blog dedicato al mondo del terzo settore. Qui troverete notizie, approfondimenti e risorse per il non-profit."
+  # Footer menu
+  [[menu.footer]]
+    name = 'Privacy Policy'
+    url = '/privacy/'
+    weight = 10
+    
+  [[menu.footer]]
+    name = 'Contatti'
+    url = '/contatti/'
+    weight = 20
 
-[[params.socialIcons]]
-  name = "linkedin"
-  url = "https://linkedin.com/company/usc-terzo-settore"
-
-[[params.socialIcons]]
-  name = "email"
-  url = "mailto:info@uscterzosettore.it"
-
-[params.editPost]
-  URL = "https://github.com/yourusername/uscterzosettore-blog/tree/main/content"
-  Text = "Suggerisci modifiche"
-  appendFilePath = true
-
-[[menu.main]]
-  identifier = "home"
-  name = "Home"
-  url = "/"
-  weight = 10
-
-[[menu.main]]
-  identifier = "posts"
-  name = "Articoli"
-  url = "/posts/"
-  weight = 20
-
-[[menu.main]]
-  identifier = "about"
-  name = "Chi Siamo"
-  url = "/about/"
-  weight = 30
-
-[[menu.main]]
-  identifier = "contact"
-  name = "Contatti"
-  url = "/contact/"
-  weight = 40
-
+# Markup configuration
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      hardWraps = false
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+      
   [markup.highlight]
-    noClasses = false
     codeFences = true
     guessSyntax = true
     lineNos = true
     style = 'github'
+    tabWidth = 2
+    
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
+# Image processing
+[imaging]
+  resampleFilter = 'CatmullRom'
+  quality = 85
+  anchor = 'smart'
+
+# Minification
+[minify]
+  disableXML = true
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = true
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 2
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 2
+
+# Output formats
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ['HTML', 'RSS', 'JSON']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML', 'RSS']
+  term = ['HTML', 'RSS']
+
+# RSS configuration
+[services]
+  [services.rss]
+    limit = 20
+
+# Security
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^git$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+# Module configuration (if using Hugo modules)
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.112.0'
