@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on USC Ente del Terzo Settore</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:59240/tags/</link>
     <description>Recent content in Tags on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-it</language>
-    <lastBuildDate>Tue, 29 Jul 2025 00:25:15 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2025 12:08:25 +0200</lastBuildDate>
+    <atom:link href="http://localhost:59240/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Benvenuto</title>
-      <link>http://localhost:1313/tags/benvenuto/</link>
+      <link>http://localhost:59240/tags/benvenuto/</link>
       <pubDate>Mon, 29 Jul 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/tags/benvenuto/</guid>
+      <guid>http://localhost:59240/tags/benvenuto/</guid>
       <description></description>
     </item>
     <item>
       <title>Presentazione</title>
-      <link>http://localhost:1313/tags/presentazione/</link>
+      <link>http://localhost:59240/tags/presentazione/</link>
       <pubDate>Mon, 29 Jul 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/tags/presentazione/</guid>
+      <guid>http://localhost:59240/tags/presentazione/</guid>
       <description></description>
     </item>
     <item>
       <title>Terzo Settore</title>
-      <link>http://localhost:1313/tags/terzo-settore/</link>
+      <link>http://localhost:59240/tags/terzo-settore/</link>
       <pubDate>Mon, 29 Jul 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/tags/terzo-settore/</guid>
+      <guid>http://localhost:59240/tags/terzo-settore/</guid>
       <description></description>
     </item>
   </channel>

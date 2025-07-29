@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>USC Ente del Terzo Settore</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:59240/</link>
     <description>Recent content on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-it</language>
-    <lastBuildDate>Tue, 29 Jul 2025 00:25:15 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2025 12:08:25 +0200</lastBuildDate>
+    <atom:link href="http://localhost:59240/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Benvenuti nel Blog di USC Ente del Terzo Settore</title>
-      <link>http://localhost:1313/posts/2024/07/benvenuti-nel-blog-di-usc-ente-del-terzo-settore/</link>
+      <link>http://localhost:59240/posts/2024/07/benvenuti-nel-blog-di-usc-ente-del-terzo-settore/</link>
       <pubDate>Mon, 29 Jul 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/posts/2024/07/benvenuti-nel-blog-di-usc-ente-del-terzo-settore/</guid>
+      <guid>http://localhost:59240/posts/2024/07/benvenuti-nel-blog-di-usc-ente-del-terzo-settore/</guid>
       <description>&lt;h1 id=&#34;benvenuti-nel-nostro-blog&#34;&gt;Benvenuti nel nostro Blog!&lt;/h1&gt;&#xA;&lt;p&gt;Siamo entusiasti di presentarvi il nuovo blog di &lt;strong&gt;USC Ente del Terzo Settore&lt;/strong&gt;, il vostro punto di riferimento per news, approfondimenti e risorse dedicate al mondo del non-profit italiano.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cosa-troverete-qui&#34;&gt;Cosa Troverete Qui&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-news-e-aggiornamenti&#34;&gt;📰 News e Aggiornamenti&lt;/h3&gt;&#xA;&lt;p&gt;Tutte le ultime notizie dal mondo del terzo settore:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nuove normative e regolamenti&lt;/li&gt;&#xA;&lt;li&gt;Bandi e opportunità di finanziamento&lt;/li&gt;&#xA;&lt;li&gt;Eventi e conferenze del settore&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-guide-e-risorse&#34;&gt;📚 Guide e Risorse&lt;/h3&gt;&#xA;&lt;p&gt;Contenuti pratici per migliorare la vostra organizzazione:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chi Siamo</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://localhost:59240/about/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://localhost:59240/about/</guid>
       <description>&lt;h1 id=&#34;usc-ente-del-terzo-settore&#34;&gt;USC Ente del Terzo Settore&lt;/h1&gt;&#xA;&lt;p&gt;Siamo un&amp;rsquo;organizzazione dedicata al supporto e allo sviluppo del terzo settore in Italia.&lt;/p&gt;&#xA;&lt;h2 id=&#34;la-nostra-mission&#34;&gt;La Nostra Mission&lt;/h2&gt;&#xA;&lt;p&gt;Promuoviamo l&amp;rsquo;innovazione sociale e supportiamo le organizzazioni non profit attraverso:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Formazione&lt;/strong&gt; e sviluppo delle competenze&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Consulenza&lt;/strong&gt; strategica e operativa&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Networking&lt;/strong&gt; e creazione di partnership&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Advocacy&lt;/strong&gt; per politiche favorevoli al settore&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;i-nostri-valori&#34;&gt;I Nostri Valori&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Trasparenza&lt;/strong&gt; in ogni azione&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Collaborazione&lt;/strong&gt; tra tutti gli stakeholder&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Innovazione&lt;/strong&gt; nelle soluzioni sociali&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Sostenibilità&lt;/strong&gt; a lungo termine&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;Per maggiori informazioni, contattaci all&amp;rsquo;indirizzo &lt;a href=&#34;mailto:info@uscterzosettore.it&#34;&gt;info@uscterzosettore.it&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chi Siamo</title>
-      <link>http://localhost:1313/chi-siamo/</link>
+      <link>http://localhost:59240/chi-siamo/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/chi-siamo/</guid>
+      <guid>http://localhost:59240/chi-siamo/</guid>
       <description>&lt;h1 id=&#34;uniti-facciamo-la-differenza&#34;&gt;Uniti facciamo la differenza&lt;/h1&gt;&#xA;&lt;p&gt;USC è un&amp;rsquo;associazione del Terzo Settore impegnata a offrire servizi di qualità a tutti coloro che si trovano in condizioni di difficoltà o svantaggio. Attraverso un approccio inclusivo e solidale, USC si dedica a migliorare la vita delle persone e delle comunità, promuovendo il benessere collettivo e offrendo supporto personalizzato. Insieme possiamo costruire un futuro più giusto e sostenibile per tutti.&lt;/p&gt;&#xA;&lt;h2 id=&#34;missione-e-visione-di-usc&#34;&gt;Missione e visione di USC&lt;/h2&gt;&#xA;&lt;p&gt;USC nasce con l&amp;rsquo;obiettivo di &lt;strong&gt;sostenere e tutelare&lt;/strong&gt; tutte le persone che si trovano in condizioni di fragilità, economica o sociale, con un&amp;rsquo;attenzione particolare ai pensionati, ai disoccupati, ai giovani, alle famiglie a basso reddito e a chiunque affronti difficoltà quotidiane. La nostra missione è quella di essere un punto di riferimento, offrendo aiuto concreto a chi ne ha più bisogno e lavorando per costruire una società più inclusiva.&lt;/p&gt;</description>
     </item>
   </channel>

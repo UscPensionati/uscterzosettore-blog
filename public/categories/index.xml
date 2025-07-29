@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on USC Ente del Terzo Settore</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://localhost:59240/categories/</link>
     <description>Recent content in Categories on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-it</language>
-    <lastBuildDate>Tue, 29 Jul 2025 00:25:15 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2025 12:08:25 +0200</lastBuildDate>
+    <atom:link href="http://localhost:59240/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notizie</title>
-      <link>http://localhost:1313/categories/notizie/</link>
+      <link>http://localhost:59240/categories/notizie/</link>
       <pubDate>Mon, 29 Jul 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/categories/notizie/</guid>
+      <guid>http://localhost:59240/categories/notizie/</guid>
       <description></description>
     </item>
   </channel>
