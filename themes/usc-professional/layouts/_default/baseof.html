@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default " it" }}">
+<html lang="{{ .Site.LanguageCode | default "it" }}">
 
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
   <!-- Meta Tags SEO -->
   <meta name="description"
     content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="author" content="{{ .Site.Params.author | default " USC Ente del Terzo Settore" }}">
+  <meta name="author" content="{{ .Site.Params.author | default "USC Ente del Terzo Settore" }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
@@ -157,7 +157,7 @@
   {{ partial "cookie-banner.html" . }}
 
   <!-- JavaScript -->
-  <script src="{{ " js/main.js" | relURL }}"></script>
+  <script src="{{ "js/main.js" | relURL }}"></script>
 
 
   {{ block "scripts" . }}{{ end }}
