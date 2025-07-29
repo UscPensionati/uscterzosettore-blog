@@ -1,6 +1,6 @@
 ﻿backend:
-  name: git-gateway # <-- MODIFICA QUI
-  branch: main # O `master`, a seconda del nome del tuo branch principale
+  name: git-gateway
+  branch: main
 
 # Configurazione locale per sviluppo
 local_backend: true
