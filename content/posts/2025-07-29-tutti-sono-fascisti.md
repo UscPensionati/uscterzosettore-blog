@@ -1,6 +1,6 @@
 ---
 title: "Tutti sono fascisti "
-date: 2025-07-29T14:33:00+02:00
+date: 2025-07-29T15:00:00+02:00
 categories: Giovani Idee
 cover:
   image: https://cdn.pixabay.com/photo/2022/10/06/12/28/vladimir-putin-7502553_1280.png
