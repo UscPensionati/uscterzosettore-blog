@@ -783,7 +783,7 @@ input, textarea, select {
 }
 
 .consent-checkbox {
-  margin-top: 2px;
+  margin-top: 6px;
   flex-shrink: 0;
 }
 
@@ -791,6 +791,16 @@ input, textarea, select {
   color: var(--color-primary);
   text-decoration: underline;
   font-weight: 700;
+}
+
+.consent-text-white a {
+  color: #8a8a8a;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.consent-text-white  {
+  color: #8a8a8a;
 }
 
 /* Form Messages */
