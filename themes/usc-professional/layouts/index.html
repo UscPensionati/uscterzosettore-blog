@@ -84,6 +84,14 @@
     <div class="posts-grid">
       {{ range first 3 (after 1 $posts) }}
       <article class="post-card">
+        {{ with .Params.cover }}
+        <div class="post-card-image">
+          <a href="{{ $.Permalink }}">
+            <img src="{{ .image }}" alt="{{ $.Title }}" loading="lazy" />
+          </a>
+        </div>
+        {{ end }}
+
         <div class="post-card-content">
           <div class="post-card-meta">
             {{ with .Params.categories }}
@@ -112,14 +120,6 @@
             </span>
           </div>
         </div>
-
-        {{ with .Params.cover }}
-        <div class="post-card-image">
-          <a href="{{ $.Permalink }}">
-            <img src="{{ .image }}" alt="{{ $.Title }}" loading="lazy" />
-          </a>
-        </div>
-        {{ end }}
       </article>
       {{ end }}
     </div>

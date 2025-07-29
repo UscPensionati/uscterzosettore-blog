@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notizie on USC Ente del Terzo Settore</title>
-    <link>http://localhost:59240/categories/notizie/</link>
+    <link>http://localhost:1313/categories/notizie/</link>
     <description>Recent content in Notizie on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-it</language>
-    <lastBuildDate>Tue, 29 Jul 2025 12:08:25 +0200</lastBuildDate>
-    <atom:link href="http://localhost:59240/categories/notizie/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Benvenuti nel Blog di USC Ente del Terzo Settore</title>
-      <link>http://localhost:59240/posts/2024/07/benvenuti-nel-blog-di-usc-ente-del-terzo-settore/</link>
-      <pubDate>Mon, 29 Jul 2024 10:00:00 +0200</pubDate>
-      <guid>http://localhost:59240/posts/2024/07/benvenuti-nel-blog-di-usc-ente-del-terzo-settore/</guid>
-      <description>&lt;h1 id=&#34;benvenuti-nel-nostro-blog&#34;&gt;Benvenuti nel nostro Blog!&lt;/h1&gt;&#xA;&lt;p&gt;Siamo entusiasti di presentarvi il nuovo blog di &lt;strong&gt;USC Ente del Terzo Settore&lt;/strong&gt;, il vostro punto di riferimento per news, approfondimenti e risorse dedicate al mondo del non-profit italiano.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cosa-troverete-qui&#34;&gt;Cosa Troverete Qui&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-news-e-aggiornamenti&#34;&gt;📰 News e Aggiornamenti&lt;/h3&gt;&#xA;&lt;p&gt;Tutte le ultime notizie dal mondo del terzo settore:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nuove normative e regolamenti&lt;/li&gt;&#xA;&lt;li&gt;Bandi e opportunità di finanziamento&lt;/li&gt;&#xA;&lt;li&gt;Eventi e conferenze del settore&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;-guide-e-risorse&#34;&gt;📚 Guide e Risorse&lt;/h3&gt;&#xA;&lt;p&gt;Contenuti pratici per migliorare la vostra organizzazione:&lt;/p&gt;</description>
-    </item>
+    <atom:link href="http://localhost:1313/categories/notizie/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
