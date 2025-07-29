@@ -3,7 +3,7 @@ title: "Tutti sono fascisti "
 date: 2025-07-29T14:39:00+02:00
 categories: Giovani Idee
 cover:
-  image: https://cdn.pixabay.com/photo/2022/10/06/12/28/vladimir-putin-7502553_1280.png
+  image: https://cdn.pixabay.com/photo/2017/01/31/15/04/banner-2024869_1280.png
   alt: Immagine della copertina del post
 description: >-
   La parola "fasciamo" è la prima persona plurale del verbo "fasciare" (es.
