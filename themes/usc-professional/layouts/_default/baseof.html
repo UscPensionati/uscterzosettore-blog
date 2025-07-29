@@ -41,15 +41,11 @@
 
   <!-- RSS -->
   {{ with .OutputFormats.Get "rss" -}}
-  {{ printf `
-  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ .Permalink }}">
-
-  <link rel="canonical" href="{{ .Permalink }}">
-
   <!-- Google Analytics 4 - Privacy Compliant -->
   {{ if not hugo.IsServer }}
   {{ with .Site.Params.google_analytics }}
