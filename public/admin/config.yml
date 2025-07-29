@@ -2,184 +2,77 @@
   name: git-gateway
   branch: main
 
-# Configurazione locale per sviluppo
-local_backend: true
-
-# Media e upload
+# Media
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# Configurazione sito
+# URLs - importanti per il workflow
 site_url: https://uscterzosettore.it
 display_url: https://uscterzosettore.it
 logo_url: /images/usc-logo.svg
 
-# Configurazioni generali
+# Preview su Netlify, produzione su Cloudflare
 show_preview_links: true
-search: true
+preview_path: "posts/{{year}}/{{month}}/{{slug}}"
 
-# Collections (Contenuti)
+# Editorial workflow per approvazioni
+publish_mode: editorial_workflow
+
 collections:
-  # POSTS/ARTICOLI
   - name: "posts"
     label: "📝 Articoli Blog"
-    label_singular: "Articolo"
     folder: "content/posts"
-    path: "{{year}}/{{month}}/{{slug}}"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: "posts/{{year}}/{{month}}/{{slug}}"
     
     fields:
       - label: "Titolo"
         name: "title"
         widget: "string"
-        hint: "Il titolo principale dell'articolo"
         
       - label: "Data Pubblicazione"
         name: "date"
         widget: "datetime"
         default: "{{now}}"
-        date_format: "DD/MM/YYYY"
-        time_format: "HH:mm"
         format: "YYYY-MM-DDTHH:mm:ss+02:00"
-        
-      - label: "Stato"
-        name: "draft"
-        widget: "boolean"
-        default: false
-        hint: "Spunta per salvare come bozza (non pubblicato)"
         
       - label: "Categoria"
         name: "categories"
         widget: "select"
-        multiple: false
         options:
-          - label: "🌱 Agricoltura Sociale"
-            value: "Agricoltura Sociale"
-          - label: "⚖️ Tutela Legale"
-            value: "Tutela Legale"
-          - label: "🏥 Assistenza Sanitaria"  
-            value: "Assistenza Sanitaria"
-          - label: "📋 Patronato"
-            value: "Patronato"
-          - label: "🎓 Giovani Idee"
-            value: "Giovani Idee"
-          - label: "💝 Donazioni"
-            value: "Donazioni"
-          - label: "📰 News"
-            value: "News"
-        hint: "Seleziona la categoria principale dell'articolo"
-        
+          - "Agricoltura Sociale"
+          - "Tutela Legale"
+          - "Assistenza Sanitaria"
+          - "Patronato"
+          - "Giovani Idee"
+          - "Donazioni"
+          - "News"
+          
       - label: "Immagine Copertina"
         name: "cover"
         widget: "object"
         collapsed: true
+        required: false
         fields:
           - label: "Immagine"
             name: "image"
             widget: "image"
             required: false
-            hint: "Immagine principale dell'articolo (consigliata: 1200x630px)"
-          - label: "Testo Alternativo"
+          - label: "Alt text"
             name: "alt"
             widget: "string"
             required: false
-            hint: "Descrizione dell'immagine per accessibilità"
-          - label: "Didascalia"
-            name: "caption"
-            widget: "string" 
-            required: false
-            hint: "Didascalia opzionale sotto l'immagine"
             
-      - label: "Riassunto"
+      - label: "Descrizione"
         name: "description"
         widget: "text"
         required: false
-        hint: "Breve descrizione dell'articolo (massimo 160 caratteri per SEO)"
-        pattern: ['^.{0,160}$', "Massimo 160 caratteri"]
         
       - label: "Autore"
         name: "author"
         widget: "string"
         default: "Redazione USC"
-        hint: "Nome dell'autore dell'articolo"
-        
-      - label: "Tag"
-        name: "tags"
-        widget: "list"
-        required: false
-        allow_add: true
-        collapsed: true
-        hint: "Parole chiave per l'articolo (premi Invio per aggiungere)"
         
       - label: "Contenuto"
         name: "body"
         widget: "markdown"
-        hint: "Scrivi qui il contenuto principale dell'articolo"
-        buttons:
-          - bold
-          - italic
-          - link
-          - heading-two
-          - heading-three
-          - heading-four
-          - quote
-          - bulleted-list
-          - numbered-list
-        editor_components:
-          - image
-          
-  # PAGINE STATICHE
-  - name: "pages"
-    label: "📄 Pagine"
-    label_singular: "Pagina" 
-    files:
-      - label: "Chi Siamo"
-        name: "chi-siamo"
-        file: "content/chi-siamo/_index.md"
-        fields:
-          - label: "Titolo"
-            name: "title"
-            widget: "string"
-            default: "Chi Siamo"
-          - label: "Data"
-            name: "date"
-            widget: "datetime"
-            default: "{{now}}"
-          - label: "Contenuto"
-            name: "body"
-            widget: "markdown"
-            
-  # IMPOSTAZIONI SITO
-  - name: "settings"
-    label: "⚙️ Impostazioni"
-    label_singular: "Impostazione"
-    files:
-      - label: "Configurazione Generale"
-        name: "config"
-        file: "hugo.toml"
-        fields:
-          - label: "Titolo Sito"
-            name: "title"
-            widget: "string"
-            default: "USC Ente del Terzo Settore"
-          - label: "URL Sito"
-            name: "baseURL"
-            widget: "string"
-            default: "https://uscterzosettore.it"
-          - label: "Descrizione"
-            name: "params.description"
-            widget: "text"
-            default: "Blog ufficiale USC Ente del Terzo Settore"
-
-# Editor settings
-editor:
-  preview: true
-  frame: true
-  
-# Slug settings
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "-"
