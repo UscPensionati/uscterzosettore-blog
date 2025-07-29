@@ -8,255 +8,476 @@ layout: "single"
 
 # Cookie Policy
 
-**Informativa sui Cookie ai sensi del Reg. UE 2016/679 (GDPR) e Provvedimento Garante del 8 maggio 2014**
+**Informativa sui Cookie ai sensi del Reg. UE 2016/679 (GDPR)**
 
 *Ultimo aggiornamento: 29 gennaio 2025*
+
+<div class="cookie-policy-intro">
+<p><strong>USC Ente del Terzo Settore</strong> utilizza cookie per migliorare la tua esperienza di navigazione. Questa pagina spiega quali cookie utilizziamo e come puoi gestirli.</p>
+</div>
 
 ---
 
 ## 🍪 Cosa sono i Cookie
 
-I **cookie** sono piccoli file di testo che i siti web visitati inviano al browser dell'utente, dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.
-
-I cookie possono essere utilizzati per diverse finalità:
-- **Tecnici**: necessari per il funzionamento del sito
-- **Analitici**: per raccogliere statistiche sull'utilizzo  
-- **Profilazione**: per mostrare contenuti personalizzati
-- **Pubblicitari**: per mostrare annunci mirati
+<div class="info-box">
+<h4>📋 Definizione</h4>
+<p>I <strong>cookie</strong> sono piccoli file di testo che i siti web inviano al browser per memorizzare informazioni e migliorare l'esperienza utente.</p>
+</div>
 
 ---
 
-## 📊 Cookie Utilizzati da USC
+## 🔧 Cookie Utilizzati da USC
 
-### 🔧 **Cookie Tecnici (non richiedono consenso)**
+### 🟢 Cookie Tecnici (sempre attivi)
 
-Questi cookie sono **essenziali** per il funzionamento del sito e **non possono essere disattivati**:
+<div class="cookie-section technical">
+<div class="section-header">
+<h4>🔧 Cookie Tecnici</h4>
+<span class="badge essential">Essenziali</span>
+</div>
 
-| Nome Cookie | Finalità | Durata | Dominio |
-|-------------|----------|---------|---------|
-| `cookie-consent` | Memorizza le preferenze sui cookie | 12 mesi | uscterzosettore.it |
-| `session_id` | Identificazione sessione utente | Sessione | uscterzosettore.it |
-| `csrf_token` | Protezione da attacchi CSRF | Sessione | uscterzosettore.it |
+<p class="section-description">Questi cookie sono <strong>necessari</strong> per il funzionamento del sito e <strong>non possono essere disattivati</strong>.</p>
 
-### 📈 **Cookie Analitici (richiedono consenso)**
+<div class="cookie-table-wrapper">
+<table class="cookie-table">
+<thead>
+<tr>
+<th>Nome Cookie</th>
+<th>Finalità</th>
+<th>Durata</th>
+<th>Dominio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cookie-consent</code></td>
+<td>Memorizza le tue preferenze sui cookie</td>
+<td>12 mesi</td>
+<td>uscterzosettore.it</td>
+</tr>
+<tr>
+<td><code>session_id</code></td>
+<td>Identificazione sessione utente</td>
+<td>Sessione</td>
+<td>uscterzosettore.it</td>
+</tr>
+<tr>
+<td><code>csrf_token</code></td>
+<td>Protezione da attacchi CSRF</td>
+<td>Sessione</td>
+<td>uscterzosettore.it</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
-Utilizzati per raccogliere informazioni sull'utilizzo del sito:
+### 📊 Cookie Analitici (richiedono consenso)
 
-| Servizio | Cookie | Finalità | Durata | Dominio |
-|----------|--------|----------|---------|---------|
-| **Google Analytics 4** | `_ga` | Identificazione utenti unici | 2 anni | .uscterzosettore.it |
-| **Google Analytics 4** | `_ga_XXXXXXXXXX` | Stato della sessione | 2 anni | .uscterzosettore.it |
-| **Google Analytics 4** | `_gid` | Identificazione utenti unici | 24 ore | .uscterzosettore.it |
+<div class="cookie-section analytics">
+<div class="section-header">
+<h4>📈 Cookie Analitici</h4>
+<span class="badge analytics">Richiedono Consenso</span>
+</div>
 
-**Privacy di Google Analytics:**
-- Anonimizzazione IP attivata
-- Dati demografici disabilitati
-- Remarketing disabilitato
-- Condivisione dati Google disabilitata
+<p class="section-description">Utilizzati per raccogliere statistiche anonime sull'utilizzo del sito:</p>
 
-### 🎯 **Cookie di Personalizzazione (richiedono consenso)**
+<div class="service-block">
+<div class="service-header">
+<h5>🔍 Google Analytics 4</h5>
+<span class="service-status">Configurazione Privacy-Friendly</span>
+</div>
 
-Per migliorare l'esperienza utente:
+<div class="cookie-table-wrapper">
+<table class="cookie-table">
+<thead>
+<tr>
+<th>Cookie</th>
+<th>Finalità</th>
+<th>Durata</th>
+<th>Dominio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_ga</code></td>
+<td>Identificazione utenti unici</td>
+<td>2 anni</td>
+<td>.uscterzosettore.it</td>
+</tr>
+<tr>
+<td><code>_ga_G7XY2JTE4PN</code></td>
+<td>Stato della sessione</td>
+<td>2 anni</td>
+<td>.uscterzosettore.it</td>
+</tr>
+<tr>
+<td><code>_gid</code></td>
+<td>Identificazione utenti unici</td>
+<td>24 ore</td>
+<td>.uscterzosettore.it</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-| Nome Cookie | Finalità | Durata | Dominio |
-|-------------|----------|---------|---------|
-| `theme_preference` | Salva tema scuro/chiaro | 6 mesi | uscterzosettore.it |
-| `language_preference` | Preferenza lingua | 6 mesi | uscterzosettore.it |
-| `newsletter_dismissed` | Banner newsletter chiuso | 30 giorni | uscterzosettore.it |
+<div class="privacy-features">
+<h6>🛡️ Impostazioni Privacy Google Analytics:</h6>
+<ul class="privacy-list">
+<li>✅ <strong>Anonimizzazione IP</strong> attivata</li>
+<li>✅ <strong>Dati demografici</strong> disabilitati</li>
+<li>✅ <strong>Remarketing</strong> disabilitato</li>
+<li>✅ <strong>Condivisione dati Google</strong> disabilitata</li>
+<li>✅ <strong>Pubblicità personalizzate</strong> disabilitate</li>
+</ul>
+</div>
+</div>
+</div>
+
+### 🎨 Cookie di Personalizzazione (richiedono consenso)
+
+<div class="cookie-section personalization">
+<div class="section-header">
+<h4>🎯 Cookie di Personalizzazione</h4>
+<span class="badge personalization">Opzionali</span>
+</div>
+
+<p class="section-description">Per migliorare la tua esperienza di navigazione:</p>
+
+<div class="cookie-table-wrapper">
+<table class="cookie-table">
+<thead>
+<tr>
+<th>Nome Cookie</th>
+<th>Finalità</th>
+<th>Durata</th>
+<th>Dominio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>theme_preference</code></td>
+<td>Salva preferenza tema scuro/chiaro</td>
+<td>6 mesi</td>
+<td>uscterzosettore.it</td>
+</tr>
+<tr>
+<td><code>newsletter_dismissed</code></td>
+<td>Ricorda banner newsletter chiuso</td>
+<td>30 giorni</td>
+<td>uscterzosettore.it</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 
 ---
 
-## ⚙️ Gestione delle Preferenze Cookie
+## ⚙️ Gestisci le Tue Preferenze
 
-### 🎛️ **Come Gestire i Cookie**
+<div class="preferences-panel">
+<h3>🎛️ Pannello Controllo Cookie</h3>
 
-Puoi gestire le tue preferenze sui cookie in qualsiasi momento:
+<div class="preference-group">
+<div class="preference-item">
+<div class="preference-header">
+<h4>🔧 Cookie Tecnici</h4>
+<span class="toggle-status always-on">Sempre Attivi</span>
+</div>
+<p class="preference-description">Necessari per il funzionamento del sito. Non possono essere disattivati.</p>
+</div>
 
-1. **Tramite il nostro banner**: clicca su "Gestisci Cookie" in basso a sinistra
-2. **Tramite il browser**: modifica le impostazioni del tuo browser
-3. **Tramite questa pagina**: utilizza i controlli qui sotto
-
-### 🔧 **Pannello Preferenze Cookie**
-
-<div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-<h4>🍪 Le Tue Preferenze Cookie</h4>
-
-**Cookie Tecnici** ✅ (sempre attivi - necessari per il sito)
-
-**Cookie Analitici** 
-<label style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
-<input type="checkbox" id="analytics-cookies" onchange="updateCookiePreferences('analytics', this.checked)"> 
-Accetta cookie di Google Analytics per statistiche anonime
+<div class="preference-item">
+<div class="preference-header">
+<h4>📊 Cookie Analitici</h4>
+<label class="toggle-switch">
+<input type="checkbox" id="analytics-cookies" onchange="updateCookiePreferences('analytics', this.checked)">
+<span class="slider"></span>
 </label>
+</div>
+<p class="preference-description">Statistiche anonime per migliorare il sito. Google Analytics con IP anonimizzato.</p>
+</div>
 
-**Cookie di Personalizzazione**
-<label style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0;">
-<input type="checkbox" id="personalization-cookies" onchange="updateCookiePreferences('personalization', this.checked)"> 
-Accetta cookie per salvare le tue preferenze
+<div class="preference-item">
+<div class="preference-header">
+<h4>🎨 Cookie Personalizzazione</h4>
+<label class="toggle-switch">
+<input type="checkbox" id="personalization-cookies" onchange="updateCookiePreferences('personalization', this.checked)">
+<span class="slider"></span>
 </label>
+</div>
+<p class="preference-description">Salvano le tue preferenze per migliorare l'esperienza utente.</p>
+</div>
+</div>
 
-<button onclick="saveAllCookiePreferences()" style="background: #000; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; margin-top: 1rem; cursor: pointer;">
-Salva Preferenze
+<div class="preference-actions">
+<button onclick="saveAllCookiePreferences()" class="btn-save-preferences">
+💾 Salva Preferenze
 </button>
+<button onclick="resetAllCookies()" class="btn-reset">
+🔄 Reset Cookie
+</button>
+</div>
 </div>
 
 ---
 
 ## 🌐 Cookie di Terze Parti
 
-### 📊 **Google Analytics**
-- **Gestore**: Google LLC, USA
-- **Finalità**: Analisi statistiche anonime del traffico
-- **Privacy Policy**: https://policies.google.com/privacy
-- **Opt-out**: https://tools.google.com/dlpage/gaoptout
-- **Garanzie**: Standard Contractual Clauses per trasferimenti USA
+<div class="third-party-section">
 
-### 📧 **Buttondown (Newsletter)**
-- **Gestore**: Buttondown LLC, USA  
-- **Finalità**: Gestione iscrizioni newsletter
-- **Privacy Policy**: https://buttondown.email/privacy
-- **Cookie**: Solo tecnici per il form di iscrizione
+<div class="third-party-service">
+<div class="service-card">
+<div class="service-icon">📊</div>
+<div class="service-content">
+<h4>Google Analytics</h4>
+<p><strong>Gestore:</strong> Google LLC, USA</p>
+<p><strong>Finalità:</strong> Analisi statistiche anonime del traffico</p>
+<div class="service-links">
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Opt-out</a>
+</div>
+</div>
+</div>
+</div>
 
-### ☁️ **Netlify (Hosting)**
-- **Gestore**: Netlify Inc., USA
-- **Finalità**: Hosting e CDN del sito web
-- **Privacy Policy**: https://www.netlify.com/privacy/
-- **Cookie**: Solo tecnici per performance e sicurezza
+<div class="third-party-service">
+<div class="service-card">
+<div class="service-icon">📧</div>
+<div class="service-content">
+<h4>Buttondown (Newsletter)</h4>
+<p><strong>Gestore:</strong> Buttondown LLC, USA</p>
+<p><strong>Finalità:</strong> Gestione iscrizioni newsletter</p>
+<div class="service-links">
+<a href="https://buttondown.email/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="third-party-service">
+<div class="service-card">
+<div class="service-icon">☁️</div>
+<div class="service-content">
+<h4>Netlify (Hosting)</h4>
+<p><strong>Gestore:</strong> Netlify Inc., USA</p>
+<p><strong>Finalità:</strong> Hosting e CDN del sito web</p>
+<div class="service-links">
+<a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
 
 ---
 
 ## 🔧 Come Disabilitare i Cookie
 
-### 🌐 **Tramite Browser**
+<div class="browser-instructions">
+<h3>🌐 Gestione tramite Browser</h3>
 
-**Chrome:**
-1. Menù → Impostazioni → Privacy e sicurezza → Cookie
-2. Scegli "Blocca cookie di terze parti" o "Blocca tutti i cookie"
+<div class="browser-grid">
+<div class="browser-card">
+<div class="browser-icon">🟦</div>
+<h4>Chrome</h4>
+<ol>
+<li>Menù → Impostazioni</li>
+<li>Privacy e sicurezza → Cookie</li>
+<li>Scegli le tue preferenze</li>
+</ol>
+</div>
 
-**Firefox:**  
-1. Menù → Impostazioni → Privacy e sicurezza
-2. In "Cookie e dati dei siti web" scegli le tue preferenze
+<div class="browser-card">
+<div class="browser-icon">🟧</div>
+<h4>Firefox</h4>
+<ol>
+<li>Menù → Impostazioni</li>
+<li>Privacy e sicurezza</li>
+<li>Cookie e dati dei siti web</li>
+</ol>
+</div>
 
-**Safari:**
-1. Safari → Preferenze → Privacy
-2. Seleziona "Blocca tutti i cookie"
+<div class="browser-card">
+<div class="browser-icon">🟣</div>
+<h4>Safari</h4>
+<ol>
+<li>Safari → Preferenze</li>
+<li>Privacy</li>
+<li>Gestisci i cookie</li>
+</ol>
+</div>
 
-**Edge:**
-1. Menù → Impostazioni → Cookie e autorizzazioni sito
-2. Attiva "Blocca cookie di terze parti"
-
-### 🔗 **Strumenti di Opt-out**
-
-- **Google Analytics**: https://tools.google.com/dlpage/gaoptout
-- **All About Cookies**: https://www.allaboutcookies.org/manage-cookies
-- **Your Online Choices**: https://www.youronlinechoices.com/it/
+<div class="browser-card">
+<div class="browser-icon">🔵</div>
+<h4>Edge</h4>
+<ol>
+<li>Menù → Impostazioni</li>
+<li>Cookie e autorizzazioni</li>
+<li>Configura preferenze</li>
+</ol>
+</div>
+</div>
+</div>
 
 ---
 
 ## ⚠️ Conseguenze della Disabilitazione
 
-**Disabilitando i cookie potresti riscontrare:**
+<div class="consequences-grid">
+<div class="consequence-item disabled">
+<h4>❌ Cookie Tecnici Disabilitati</h4>
+<ul>
+<li>Problemi di navigazione</li>
+<li>Perdita di funzionalità</li>
+<li>Esperienza utente compromessa</li>
+</ul>
+</div>
 
-❌ **Cookie Tecnici disabilitati:**
-- Problemi di navigazione
-- Impossibilità di utilizzare alcune funzioni
-- Perdita di preferenze utente
+<div class="consequence-item neutral">
+<h4>📊 Cookie Analitici Disabilitati</h4>
+<ul>
+<li>✅ Nessun impatto sull'uso del sito</li>
+<li>❌ Non possiamo migliorare il servizio</li>
+<li>❌ Statistiche incomplete</li>
+</ul>
+</div>
 
-❌ **Cookie Analitici disabilitati:**
-- Nessun impatto sull'esperienza utente
-- Impossibilità per noi di migliorare il sito
-
-❌ **Cookie Personalizzazione disabilitati:**
-- Perdita delle preferenze salvate
-- Esperienza meno personalizzata
-
----
-
-## 📱 Cookie e Dispositivi Mobili
-
-Su dispositivi mobili, i cookie funzionano come sui computer desktop. Puoi gestire le preferenze:
-
-**Safari (iOS):**
-Impostazioni → Safari → Privacy e sicurezza → Blocca cookie
-
-**Chrome (Android):**
-Chrome → Impostazioni → Impostazioni sito → Cookie
-
-**Samsung Internet:**
-Menù → Impostazioni → Siti web e download → Cookie
-
----
-
-## 🔄 Aggiornamenti della Cookie Policy
-
-Questa Cookie Policy può essere aggiornata per:
-- **Modifiche normative** (nuove leggi sui cookie)
-- **Nuovi servizi** implementati sul sito
-- **Modifiche tecniche** ai cookie utilizzati
-
-Gli aggiornamenti vengono comunicati tramite:
-- **Banner informativo** sul sito
-- **Email** agli iscritti newsletter (per modifiche sostanziali)
-- **Data aggiornamento** in questa pagina
+<div class="consequence-item minor">
+<h4>🎨 Cookie Personalizzazione Disabilitati</h4>
+<ul>
+<li>Perdita preferenze salvate</li>
+<li>Esperienza meno personalizzata</li>
+<li>Re-inserimento impostazioni</li>
+</ul>
+</div>
+</div>
 
 ---
 
-## 📞 Contatti
+## 📞 Contatti e Supporto
 
-Per domande sui cookie o questa policy:
-
-**📧 Email:** redazione@uscterzosettore.it  
-**📮 Posta:** USC Ente del Terzo Settore, Via del Castro Pretorio 30, 00185 Roma  
-**📞 Telefono:** [DA INSERIRE]
-
-**Garante Privacy:** garante@gpdp.it - www.garanteprivacy.it
+<div class="contact-box">
+<h3>💬 Hai Domande sui Cookie?</h3>
+<div class="contact-grid">
+<div class="contact-item">
+<strong>📧 Email Privacy:</strong><br>
+<a href="mailto:redazione@uscterzosettore.it">redazione@uscterzosettore.it</a>
+</div>
+<div class="contact-item">
+<strong>📧 Email Generale:</strong><br>
+<a href="mailto:redazione@uscterzosettore.it">redazione@uscterzosettore.it</a>
+</div>
+<div class="contact-item">
+<strong>📮 Posta:</strong><br>
+USC Ente del Terzo Settore<br>
+Via del Castro Pretorio, 30<br>
+00185 Roma
+</div>
+<div class="contact-item">
+<strong>⚖️ Garante Privacy:</strong><br>
+<a href="mailto:garante@gpdp.it">garante@gpdp.it</a><br>
+<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>
+</div>
+</div>
+</div>
 
 ---
-
-## 📜 JavaScript per Gestione Cookie
 
 <script>
-// Funzioni per gestire preferenze cookie dalla pagina
+// Cookie Policy Management Functions
 function updateCookiePreferences(type, enabled) {
-    // Aggiorna le preferenze senza salvare ancora
     console.log(`Cookie ${type}: ${enabled ? 'enabled' : 'disabled'}`);
+    
+    // Visual feedback
+    const checkbox = document.getElementById(`${type}-cookies`);
+    if (checkbox) {
+        checkbox.checked = enabled;
+    }
 }
 
 function saveAllCookiePreferences() {
     const analytics = document.getElementById('analytics-cookies').checked;
     const personalization = document.getElementById('personalization-cookies').checked;
     
-    // Salva le preferenze nei cookie
+    // Save preferences
     setCookie('cookie-consent-analytics', analytics ? 'granted' : 'denied', 365);
     setCookie('cookie-consent-personalization', personalization ? 'granted' : 'denied', 365);
     
-    // Aggiorna Google Analytics se presente
+    // Update consent string
+    const consentLevel = analytics ? 'all' : 'essential';
+    setCookie('cookie-consent', consentLevel, 365);
+    
+    // Update Google Analytics if present
     if (typeof gtag !== 'undefined') {
         gtag('consent', 'update', {
-            'analytics_storage': analytics ? 'granted' : 'denied'
+            'analytics_storage': analytics ? 'granted' : 'denied',
+            'functionality_storage': personalization ? 'granted' : 'denied'
         });
     }
     
-    alert('✅ Preferenze cookie salvate con successo!');
+    // Success feedback
+    showSuccessMessage('✅ Preferenze cookie salvate con successo!');
     
-    // Ricarica la pagina per applicare le modifiche
-    setTimeout(() => location.reload(), 1000);
+    // Reload page after a moment
+    setTimeout(() => location.reload(), 1500);
 }
 
-// Carica preferenze esistenti
+function resetAllCookies() {
+    if (confirm('🔄 Sei sicuro di voler ripristinare tutte le impostazioni cookie?')) {
+        // Clear all consent cookies
+        setCookie('cookie-consent', '', -1);
+        setCookie('cookie-consent-analytics', '', -1);
+        setCookie('cookie-consent-personalization', '', -1);
+        
+        showSuccessMessage('🔄 Cookie ripristinati. La pagina si ricaricherà...');
+        setTimeout(() => location.reload(), 1500);
+    }
+}
+
+function showSuccessMessage(message) {
+    const toast = document.createElement('div');
+    toast.className = 'cookie-toast success';
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #22c55e;
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        z-index: 10001;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        animation: slideInRight 0.3s ease-out;
+    `;
+    
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+// Load existing preferences
 document.addEventListener('DOMContentLoaded', function() {
     const analyticsConsent = getCookie('cookie-consent-analytics') === 'granted';
     const personalizationConsent = getCookie('cookie-consent-personalization') === 'granted';
     
-    document.getElementById('analytics-cookies').checked = analyticsConsent;
-    document.getElementById('personalization-cookies').checked = personalizationConsent;
+    const analyticsCheckbox = document.getElementById('analytics-cookies');
+    const personalizationCheckbox = document.getElementById('personalization-cookies');
+    
+    if (analyticsCheckbox) analyticsCheckbox.checked = analyticsConsent;
+    if (personalizationCheckbox) personalizationCheckbox.checked = personalizationConsent;
 });
 
-// Utility function per cookie (se non già presente)
+// Utility functions
 function setCookie(name, value, days) {
     const expires = new Date();
     expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+    const secure = location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Lax${secure}`;
 }
 
 function getCookie(name) {
@@ -273,4 +494,4 @@ function getCookie(name) {
 
 ---
 
-*USC Ente del Terzo Settore utilizza i cookie nel pieno rispetto della normativa privacy e dei tuoi diritti. Per qualsiasi dubbio, non esitare a contattarci.*
+*USC Ente del Terzo Settore si impegna a utilizzare i cookie nel pieno rispetto della normativa privacy e dei tuoi diritti.*

@@ -2,43 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:51010/categories/</loc>
-    <lastmod>2025-07-29T11:58:32+00:00</lastmod>
+    <loc>https://uscterzosettore.it/categories/</loc>
+    <lastmod>2025-07-29T15:48:46+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/posts/2025/07/micio-miaop/</loc>
-    <lastmod>2025-07-29T11:58:32+00:00</lastmod>
+    <loc>https://uscterzosettore.it/posts/</loc>
+    <lastmod>2025-07-29T15:48:46+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/posts/</loc>
-    <lastmod>2025-07-29T11:58:32+00:00</lastmod>
+    <loc>https://uscterzosettore.it/posts/2025/07/test-post-02/</loc>
+    <lastmod>2025-07-29T15:48:46+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/categories/tutela-legale/</loc>
-    <lastmod>2025-07-29T11:58:32+00:00</lastmod>
+    <loc>https://uscterzosettore.it/categories/tutela-legale/</loc>
+    <lastmod>2025-07-29T15:48:46+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/</loc>
-    <lastmod>2025-07-29T11:58:32+00:00</lastmod>
+    <loc>https://uscterzosettore.it/</loc>
+    <lastmod>2025-07-29T23:12:24+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/categories/assistenza-sanitaria/</loc>
-    <lastmod>2025-07-29T11:51:05+00:00</lastmod>
+    <loc>https://uscterzosettore.it/categories/assistenza-sanitaria/</loc>
+    <lastmod>2025-07-29T16:42:50+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/tags/benvenuto/</loc>
-    <lastmod>2025-07-29T11:51:05+00:00</lastmod>
+    <loc>https://uscterzosettore.it/tags/benvenuto/</loc>
+    <lastmod>2025-07-29T16:42:50+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/posts/2025/07/post-di-prova/</loc>
-    <lastmod>2025-07-29T11:51:05+00:00</lastmod>
+    <loc>https://uscterzosettore.it/posts/2025/07/post-di-prova/</loc>
+    <lastmod>2025-07-29T16:42:50+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/tags/presentazione/</loc>
-    <lastmod>2025-07-29T11:51:05+00:00</lastmod>
+    <loc>https://uscterzosettore.it/tags/presentazione/</loc>
+    <lastmod>2025-07-29T16:42:50+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/tags/</loc>
-    <lastmod>2025-07-29T11:51:05+00:00</lastmod>
+    <loc>https://uscterzosettore.it/tags/</loc>
+    <lastmod>2025-07-29T16:42:50+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/tags/terzo-settore/</loc>
-    <lastmod>2025-07-29T11:51:05+00:00</lastmod>
+    <loc>https://uscterzosettore.it/tags/terzo-settore/</loc>
+    <lastmod>2025-07-29T16:42:50+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/about/</loc>
-    <lastmod>2025-07-29T00:25:15+02:00</lastmod>
+    <loc>https://uscterzosettore.it/contatti/</loc>
+    <lastmod>2025-07-29T23:12:24+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:51010/chi-siamo/</loc>
+    <loc>https://uscterzosettore.it/cookie-policy/</loc>
+    <lastmod>2025-07-29T23:12:24+02:00</lastmod>
+  </url><url>
+    <loc>https://uscterzosettore.it/privacy/</loc>
+    <lastmod>2025-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://uscterzosettore.it/chi-siamo/</loc>
     <lastmod>2025-07-29T12:08:25+02:00</lastmod>
   </url>
 </urlset>

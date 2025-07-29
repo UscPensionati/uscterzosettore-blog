@@ -20,7 +20,7 @@
 
                     <!-- Newsletter Subscribe Button -->
                     <a href="#newsletter" class="subscribe-btn">
-                        SUBSCRIBE
+                        ISCRIVITI ORA!
                     </a>
 
                     <!-- Admin Login (visible only to authenticated users) -->
@@ -58,6 +58,13 @@
                                 CHI SIAMO
                             </a>
                         </li>
+
+                                                <li class="nav-item">
+                            <a href="{{ "/contatti/" | relURL }}" class="nav-link {{ if eq .Section " contatti"
+                                }}active{{ end }}">
+                                CHI SIAMO
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -87,6 +94,6 @@
             </ul>
         </li>
         <li><a href="{{ " /chi-siamo/" | relURL }}">CHI SIAMO</a></li>
-        <li><a href="#newsletter" class="mobile-subscribe">ISCRIVITI</a></li>
+        <li><a href="#newsletter" class="mobile-subscribe">ISCRIVITI ORA!</a></li>
     </ul>
 </nav>
