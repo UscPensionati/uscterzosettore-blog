@@ -666,10 +666,9 @@ select {
   gap: var(--space-3);
 }
 
-/* .topic-item {
-  
-} 
-*/
+.topic-item {
+  /* Add styles as needed */
+}
 
 .topic-link {
   display: flex;
