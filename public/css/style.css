@@ -410,7 +410,6 @@ select {
 
 /* Homepage Hero Section */
 .latest-post-hero {
-  max-width: var(--max-width);
   margin: 0 auto var(--space-16);
 }
 
@@ -823,7 +822,7 @@ select {
 }
 
 .consent-text-white {
-  color: #9c9a9a;
+  color: #8a8a8a;
 }
 
 /* Form Messages */
@@ -1866,8 +1865,6 @@ select {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 4rem;
   margin-top: 2rem;
 }
@@ -1881,7 +1878,7 @@ select {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
-  align-items: start;
+  align-items: center;
 }
 
 .hero-image {
@@ -2265,6 +2262,7 @@ select {
 @media (max-width: 768px) {
   .homepage-container {
     padding: 0 1rem;
+    display: block;
   }
 
   .hero-content {

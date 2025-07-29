@@ -2,20 +2,14 @@
   name: git-gateway
   branch: main
 
-# Media
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# URLs - importanti per il workflow
 site_url: https://uscterzosettore.it
 display_url: https://uscterzosettore.it
 logo_url: /images/usc-logo.svg
 
-# Preview su Netlify, produzione su Cloudflare
 show_preview_links: true
-preview_path: "posts/{{year}}/{{month}}/{{slug}}"
-
-# Editorial workflow per approvazioni
 publish_mode: editorial_workflow
 
 collections:
@@ -39,6 +33,7 @@ collections:
       - label: "Categoria"
         name: "categories"
         widget: "select"
+        multiple: false
         options:
           - "Agricoltura Sociale"
           - "Tutela Legale"
@@ -47,7 +42,9 @@ collections:
           - "Giovani Idee"
           - "Donazioni"
           - "News"
-          
+        # QUESTA È LA CHIAVE: forza il salvataggio come array
+        default: []
+        
       - label: "Immagine Copertina"
         name: "cover"
         widget: "object"
