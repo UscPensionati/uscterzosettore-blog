@@ -1,192 +1,200 @@
 ﻿<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "it" }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    {{ block "title" . }}
-        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    {{ end }}
-    
-    <!-- Meta Tags SEO -->
-    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="author" content="{{ .Site.Params.author | default "USC Ente del Terzo Settore" }}">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    {{ with .Params.featured_image }}
-    <meta property="og:image" content="{{ . | absURL }}">
-    {{ end }}
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-    <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    
-    <!-- RSS -->
-    {{ with .OutputFormats.Get "rss" -}}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ .Permalink }}">
+<html lang="{{ .Site.LanguageCode | default " it" }}">
 
-        <link rel="canonical" href="{{ .Permalink }}">
-    
-    <!-- Google Analytics 4 - Privacy Compliant -->
-    {{ if not hugo.IsServer }}
-      {{ with .Site.Params.google_analytics }}
-      
-      <!-- Google Tag Manager / GA4 -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-      <script>
-        // Initialize dataLayer
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        
-        // Set initial timestamp
-        gtag('js', new Date());
-        
-        // GDPR/Cookie Consent - Default DENIED
-        gtag('consent', 'default', {
-          'ad_storage': 'denied',
-          'ad_user_data': 'denied', 
-          'ad_personalization': 'denied',
-          'analytics_storage': 'denied',
-          'functionality_storage': 'denied',
-          'personalization_storage': 'denied',
-          'security_storage': 'granted'  // Always granted for security
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {{ block "title" . }}
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  {{ end }}
+
+  <!-- Meta Tags SEO -->
+  <meta name="description"
+    content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author | default " USC Ente del Terzo Settore" }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description"
+    content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{ with .Params.featured_image }}
+  <meta property="og:image" content="{{ . | absURL }}">
+  {{ end }}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta name="twitter:description"
+    content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ " css/style.css" | relURL }}">
+
+  <!-- RSS -->
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `
+  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <!-- Google Analytics 4 - Privacy Compliant -->
+  {{ if not hugo.IsServer }}
+  {{ with .Site.Params.google_analytics }}
+
+  <!-- Google Tag Manager / GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    // Initialize dataLayer
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Set initial timestamp
+    gtag('js', new Date());
+
+    // GDPR/Cookie Consent - Default DENIED
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted'  // Always granted for security
+    });
+
+    // Configure GA4 with privacy settings
+    gtag('config', 'G-7XY2JTE4PN', {
+      // Privacy Protection
+      'anonymize_ip': true,
+      'allow_google_signals': false,
+      'allow_ad_personalization_signals': false,
+      'restricted_data_processing': true,
+
+      // Enhanced Ecommerce (disabled for privacy)
+      'send_page_view': true,
+      'page_title': '{{ $.Title }}',
+      'page_location': '{{ $.Permalink }}',
+
+      // Custom Parameters for Blog
+      'custom_map': {
+        'dimension1': 'page_category',
+        'dimension2': 'author',
+        'dimension3': 'publish_date'
+      },
+
+      // Set custom dimensions
+      'page_category': '{{ with $.Params.category }}{{ . }}{{ else }}{{ $.Type }}{{ end }}',
+      'author': '{{ with $.Params.author }}{{ . }}{{ else }}Redazione USC{{ end }}',
+      'publish_date': '{{ $.Date.Format "2006-01-02" }}'
+    });
+
+    // Track page view manually after consent
+    // Track page view manually after consent
+    function trackPageView() {
+      gtag('event', 'page_view', {
+        'page_title': '{{ $.Title }}',
+        'page_location': '{{ $.Permalink }}',
+        'page_category': '{{ with $.Params.category }}{{ . }}{{ else }}{{ $.Type }}{{ end }}',
+        'content_group1': '{{ $.Type }}',
+        'content_group2': '{{ with $.Params.category }}{{ . }}{{ else }}General{{ end }}'
+      });
+    }
+
+    // Check for existing consent on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      const cookieConsent = getCookieValue('cookie-consent');
+      if (cookieConsent === 'all') {
+        // User previously accepted all cookies
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'functionality_storage': 'granted'
         });
-        
-        // Configure GA4 with privacy settings
-        gtag('config', 'G-7XY2JTE4PN', {
-          // Privacy Protection
-          'anonymize_ip': true,
-          'allow_google_signals': false,
-          'allow_ad_personalization_signals': false,
-          'restricted_data_processing': true,
-          
-          // Enhanced Ecommerce (disabled for privacy)
-          'send_page_view': true,
-          'page_title': '{{ .Title }}',
-          'page_location': '{{ .Permalink }}',
-          
-          // Custom Parameters for Blog
-          'custom_map': {
-            'dimension1': 'page_category',
-            'dimension2': 'author', 
-            'dimension3': 'publish_date'
-          },
-          
-          // Set custom dimensions
-          'page_category': '{{ with .Params.category }}{{ . }}{{ else }}{{ .Type }}{{ end }}',
-          'author': '{{ with .Params.author }}{{ . }}{{ else }}Redazione USC{{ end }}',
-          'publish_date': '{{ .Date.Format "2006-01-02" }}'
-        });
-        
-        // Track page view manually after consent
-        function trackPageView() {
-          gtag('event', 'page_view', {
-            'page_title': '{{ .Title }}',
-            'page_location': '{{ .Permalink }}',
-            'page_category': '{{ with .Params.category }}{{ . }}{{ else }}{{ .Type }}{{ end }}',
-            'content_group1': '{{ .Type }}',
-            'content_group2': '{{ with .Params.category }}{{ . }}{{ else }}General{{ end }}'
+        trackPageView();
+      }
+    });
+
+    // Utility function to get cookie (needed here before main.js loads)
+    function getCookieValue(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+  </script>
+
+  {{ end }}
+  {{ end }}
+
+  {{ block "head" . }}{{ end }}
+</head>
+
+<body class="{{ if .IsHome }}home{{ else }}{{ .Type }}{{ end }}">
+
+  {{ partial "header.html" . }}
+
+  <main class="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "cookie-banner.html" . }}
+
+  <!-- JavaScript -->
+  <script src="{{ " js/main.js" | relURL }}"></script>
+
+
+  {{ block "scripts" . }}{{ end }}
+
+  <!-- Netlify Identity for Decap CMS -->
+  {{ if hugo.IsServer }}
+  {{ else }}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
           });
         }
-        
-        // Check for existing consent on page load
-        document.addEventListener('DOMContentLoaded', function() {
-          const cookieConsent = getCookieValue('cookie-consent');
-          if (cookieConsent === 'all') {
-            // User previously accepted all cookies
-            gtag('consent', 'update', {
-              'analytics_storage': 'granted',
-              'functionality_storage': 'granted'
-            });
-            trackPageView();
-          }
-        });
-        
-        // Utility function to get cookie (needed here before main.js loads)
-        function getCookieValue(name) {
-          const nameEQ = name + "=";
-          const ca = document.cookie.split(';');
-          for(let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-          }
-          return null;
-        }
-      </script>
-      
-      {{ end }}
-    {{ end }}
-    
-    {{ block "head" . }}{{ end }}
-</head>
-<body class="{{ if .IsHome }}home{{ else }}{{ .Type }}{{ end }}">
-    
-    {{ partial "header.html" . }}
-    
-    <main class="main-content">
-        {{ block "main" . }}{{ end }}
-    </main>
-    
-    {{ partial "footer.html" . }}
+      });
+    }
+  </script>
+  {{ end }}
 
-    {{ partial "cookie-banner.html" . }}
-    
-    <!-- JavaScript -->
-    <script src="{{ "js/main.js" | relURL }}"></script>
-    
-    
-    {{ block "scripts" . }}{{ end }}
-    
-    <!-- Netlify Identity for Decap CMS -->
-    {{ if hugo.IsServer }}
-    {{ else }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-    {{ end }}
-    
-    <!-- Netlify Identity for Decap CMS -->
-    {{ if not hugo.IsServer }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-    {{ end }}
+  <!-- Netlify Identity for Decap CMS -->
+  {{ if not hugo.IsServer }}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  {{ end }}
 </body>
+
 </html>
