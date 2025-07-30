@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on USC Ente del Terzo Settore</title>
-    <link>http://localhost:1313/categories/news/</link>
+    <link>https://uscterzosettore.it/categories/news/</link>
     <description>Recent content in News on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-it</language>
-    <lastBuildDate>Wed, 30 Jul 2025 10:05:40 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jul 2025 10:44:48 +0000</lastBuildDate>
+    <atom:link href="https://uscterzosettore.it/categories/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future</title>
-      <link>http://localhost:1313/posts/2025/07/il-terzo-settore-in-italia-motore-sociale-sviluppo-locale-e-sfide-future/</link>
-      <pubDate>Wed, 30 Jul 2025 12:08:00 +0200</pubDate>
-      <guid>http://localhost:1313/posts/2025/07/il-terzo-settore-in-italia-motore-sociale-sviluppo-locale-e-sfide-future/</guid>
+      <link>https://uscterzosettore.it/posts/2025/07/il-terzo-settore-in-italia-motore-sociale-sviluppo-locale-e-sfide-future/</link>
+      <pubDate>Wed, 30 Jul 2025 12:44:00 +0200</pubDate>
+      <guid>https://uscterzosettore.it/posts/2025/07/il-terzo-settore-in-italia-motore-sociale-sviluppo-locale-e-sfide-future/</guid>
       <description>&lt;p&gt;Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future&lt;/p&gt;&#xA;&lt;p&gt;In Italia il Terzo Settore rappresenta molto più di un insieme di associazioni e cooperative: è un pilastro del welfare, un attore economico rilevante e una rete di solidarietà che tiene insieme la società. Con oltre 360 mila enti non profit, quasi 900 mila lavoratori e più di 4,5 milioni di volontari, il Terzo Settore incide profondamente sulla vita quotidiana delle persone e contribuisce al 4,4% del PIL nazionale.&lt;/p&gt;</description>
     </item>
   </channel>
