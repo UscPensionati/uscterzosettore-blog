@@ -68,7 +68,7 @@
         {{ $categories := slice "Agricoltura Sociale" "Tutela Legale" "Assistenza Sanitaria" "Patronato" "Giovani Idee" "Donazioni" "News" }}
         {{ range $categories }}
             {{ $categorySlug := . | urlize }}
-            {{ $categoryPosts := where $.Site.RegularPages "Params.category" . }}
+            {{ $categoryPosts := where $.Site.RegularPages "Params.categories" "intersect" (slice .) }}
             {{ $categoryCount := len $categoryPosts }}
             {{ if gt $categoryCount 0 }}
             <div class="category-card">
@@ -82,7 +82,13 @@
                             {{ range first 3 $categoryPosts }}
                             <div class="category-card-post">
                                 <span class="post-title-preview">{{ .Title }}</span>
-                                <span class="post-date-preview">{{ .Date.Format "2 Jan 2006" }}</span>
+                                {{/* DATA FIX - Formato Italiano */}}
+                                <span class="post-date-preview">
+                                  {{ $day := .Date.Day }}
+                                  {{ $month := index (slice "gen" "feb" "mar" "apr" "mag" "giu" "lug" "ago" "set" "ott" "nov" "dic") (sub .Date.Month 1) }}
+                                  {{ $year := .Date.Year }}
+                                  {{ $day }} {{ $month }} {{ $year }}
+                                </span>
                             </div>
                             {{ end }}
                         </div>
@@ -106,7 +112,13 @@
         <div class="posts-preview-grid">
             {{ range first 6 $allPosts }}
             <article class="post-preview-card">
-                {{ if .Params.featured_image }}
+                {{ if .Params.cover }}
+                <div class="post-preview-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+                    </a>
+                </div>
+                {{ else if .Params.featured_image }}
                 <div class="post-preview-image">
                     <a href="{{ .Permalink }}">
                         <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
@@ -115,15 +127,23 @@
                 {{ end }}
                 <div class="post-preview-content">
                     <div class="post-preview-meta">
-                        {{ if .Params.category }}
-                        <span class="post-preview-category">{{ .Params.category }}</span>
+                        {{ with .Params.categories }}
+                        <span class="post-preview-category">{{ index . 0 }}</span>
                         {{ end }}
-                        <span class="post-preview-date">{{ .Date.Format "2 Jan 2006" }}</span>
+                        {{/* DATA FIX - Formato Italiano */}}
+                        <span class="post-preview-date">
+                          {{ $day := .Date.Day }}
+                          {{ $month := index (slice "gen" "feb" "mar" "apr" "mag" "giu" "lug" "ago" "set" "ott" "nov" "dic") (sub .Date.Month 1) }}
+                          {{ $year := .Date.Year }}
+                          {{ $day }} {{ $month }} {{ $year }}
+                        </span>
                     </div>
                     <h3 class="post-preview-title">
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
                     </h3>
-                    {{ if .Params.excerpt }}
+                    {{ if .Params.description }}
+                    <p class="post-preview-excerpt">{{ .Params.description }}</p>
+                    {{ else if .Params.excerpt }}
                     <p class="post-preview-excerpt">{{ .Params.excerpt }}</p>
                     {{ else if .Summary }}
                     <p class="post-preview-excerpt">{{ .Summary }}</p>
@@ -149,17 +169,25 @@
         <article class="post-list-item">
             <div class="post-list-content">
                 <div class="post-list-meta">
-                    {{ if .Params.category }}
-                    <span class="post-list-category">{{ .Params.category }}</span>
+                    {{ with .Params.categories }}
+                    <span class="post-list-category">{{ index . 0 }}</span>
                     {{ end }}
-                    <span class="post-list-date">{{ .Date.Format "2 JANUARY 2006" }}</span>
+                    {{/* DATA FIX - Formato Italiano Maiuscolo */}}
+                    <span class="post-list-date">
+                      {{ $day := .Date.Day }}
+                      {{ $month := index (slice "GENNAIO" "FEBBRAIO" "MARZO" "APRILE" "MAGGIO" "GIUGNO" "LUGLIO" "AGOSTO" "SETTEMBRE" "OTTOBRE" "NOVEMBRE" "DICEMBRE") (sub .Date.Month 1) }}
+                      {{ $year := .Date.Year }}
+                      {{ $day }} {{ $month }} {{ $year }}
+                    </span>
                 </div>
                 
                 <h2 class="post-list-title">
                     <a href="{{ .Permalink }}">{{ .Title }}</a>
                 </h2>
                 
-                {{ if .Params.excerpt }}
+                {{ if .Params.description }}
+                <p class="post-list-excerpt">{{ .Params.description }}</p>
+                {{ else if .Params.excerpt }}
                 <p class="post-list-excerpt">{{ .Params.excerpt }}</p>
                 {{ else if .Summary }}
                 <p class="post-list-excerpt">{{ .Summary }}</p>
@@ -172,7 +200,7 @@
                     <span class="post-list-reading-time">
                         {{ $wordCount := .WordCount }}
                         {{ $readingTime := div $wordCount 200 }}
-                        {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} min read
+                        {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} min lettura
                     </span>
                     {{ if .Params.tags }}
                     <div class="post-list-tags">
@@ -184,7 +212,13 @@
                 </div>
             </div>
             
-            {{ if .Params.featured_image }}
+            {{ if .Params.cover }}
+            <div class="post-list-image">
+                <a href="{{ .Permalink }}">
+                    <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+                </a>
+            </div>
+            {{ else if .Params.featured_image }}
             <div class="post-list-image">
                 <a href="{{ .Permalink }}">
                     <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
