@@ -3,7 +3,7 @@ title: "Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide futu
 date: 2025-07-30T12:08:00+02:00
 categories: News
 cover:
-  image: https://cdn.pixabay.com/photo/2024/11/18/10/20/businessman-9205819_1280.png
+  image: https://www.noiverona.com/wp-content/uploads/2019/11/TERZO-SETTORE.jpg
 description: >
   In Italia il Terzo Settore rappresenta molto più di un insieme di associazioni
   e cooperative: è un pilastro del welfare, un attore economico rilevante e una
