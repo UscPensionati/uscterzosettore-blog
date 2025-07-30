@@ -11,7 +11,7 @@ description: >
   profit, quasi 900 mila lavoratori e più di 4,5 milioni di volontari, il Terzo
   Settore incide profondamente sulla vita quotidiana delle persone e
   contribuisce al 4,4% del PIL nazionale.
-author: Andrea de Pasquale
+author: Redazione USC
 ---
 Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future
 
