@@ -2032,6 +2032,9 @@ select {
 
 .author-avatar {
   flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .author-img {
