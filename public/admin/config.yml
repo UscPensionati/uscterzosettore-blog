@@ -27,7 +27,6 @@ collections:
       - label: "Data Pubblicazione"
         name: "date"
         widget: "datetime"
-        default: "{{now}}"
         format: "YYYY-MM-DDTHH:mm:ss+02:00"
         
       - label: "Categoria"
