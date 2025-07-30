@@ -4,7 +4,7 @@ date: 2025-07-29T13:40:00+0200
 categories:
   - Agricoltura Sociale
 cover:
-  image: /images/uploads/pexels-pixabay-46798.jpg
+  image: /images/uploads/pexels-pixabay-265216.jpg
   alt: foto
 description: "L'agricoltura sociale è un approccio multifunzionale
   all'agricoltura che integra attività agricole con servizi sociali,
