@@ -1,66 +1,118 @@
 ﻿// USC Professional Theme JavaScript
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile Menu Toggle
+
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const mobileNav = document.querySelector('.mobile-navigation');
-    let isMenuOpen = false;
+    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileClose = document.querySelector('.mobile-close');
 
-    if (mobileToggle && mobileNav) {
-        mobileToggle.addEventListener('click', function () {
-            isMenuOpen = !isMenuOpen;
+    // CORREZIONE: Selettori specifici per mobile dropdown
+    const dropdownToggle = document.querySelector('.mobile-nav-menu .dropdown-toggle');
+    const dropdownMenu = document.querySelector('.mobile-nav-menu .mobile-dropdown-menu');
+    const hasDropdown = document.querySelector('.mobile-nav-menu .has-dropdown');
 
-            if (isMenuOpen) {
-                mobileNav.classList.add('active');
-                mobileNav.style.display = 'block';
-            } else {
-                mobileNav.classList.remove('active');
-                mobileNav.style.display = 'none';
-            }
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        const isActive = mobileNav.classList.contains('active');
 
-            // Animate hamburger
-            const spans = mobileToggle.querySelectorAll('span');
-            if (isMenuOpen) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+        if (isActive) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+    function openMobileMenu() {
+        mobileToggle.classList.add('active');
+        mobileNav.classList.add('active');
+        if (mobileOverlay) mobileOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        if (mobileOverlay) mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Chiudi anche il dropdown se aperto
+        if (hasDropdown && dropdownMenu) {
+            hasDropdown.classList.remove('active');
+            dropdownMenu.classList.remove('active');
+        }
+    }
+
+    // Event listeners
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileClose) {
+        mobileClose.addEventListener('click', closeMobileMenu);
+    }
+
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // CORREZIONE: Dropdown toggle con controlli di sicurezza
+    if (dropdownToggle && hasDropdown && dropdownMenu) {
+        dropdownToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log('Dropdown clicked!'); // Debug
+            hasDropdown.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
+    } else {
+        console.log('Dropdown elements not found:', {
+            dropdownToggle: !!dropdownToggle,
+            hasDropdown: !!hasDropdown,
+            dropdownMenu: !!dropdownMenu
         });
     }
 
-    // Mobile Dropdown Toggle
-    const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
-    const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+    // Close menu when clicking on non-dropdown links
+    document.querySelectorAll('.mobile-nav-menu a:not(.dropdown-toggle)').forEach(link => {
+        link.addEventListener('click', () => {
+            setTimeout(closeMobileMenu, 100);
+        });
+    });
 
-    if (mobileDropdownToggle && mobileDropdownMenu) {
-        mobileDropdownToggle.addEventListener('click', function () {
-            const isOpen = mobileDropdownMenu.style.display === 'block';
-            mobileDropdownMenu.style.display = isOpen ? 'none' : 'block';
+    // Close menu on escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+    // Prevent menu close when clicking inside navigation
+    if (mobileNav) {
+        mobileNav.addEventListener('click', function (e) {
+            e.stopPropagation();
         });
     }
 
-    // Close mobile menu when clicking on links
-    const mobileLinks = document.querySelectorAll('.mobile-nav-menu a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            if (mobileNav) {
-                mobileNav.style.display = 'none';
-                mobileNav.classList.remove('active');
-                isMenuOpen = false;
+    // Active page highlighting
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.mobile-nav-menu a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href === currentPath) {
+            link.classList.add('active');
+        }
+    });
 
-                // Reset hamburger
-                if (mobileToggle) {
-                    const spans = mobileToggle.querySelectorAll('span');
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
+    // Smooth animations
+    if (mobileNav) {
+        mobileNav.addEventListener('transitionend', function (e) {
+            if (e.propertyName === 'right' && !mobileNav.classList.contains('active')) {
+                // Menu completamente chiuso
+                if (hasDropdown && dropdownMenu) {
+                    hasDropdown.classList.remove('active');
+                    dropdownMenu.classList.remove('active');
                 }
             }
         });
-    });
+    }
 });
 
 
@@ -233,15 +285,15 @@ function trackNewsletterSignup(provider = 'buttondown') {
 // Track Article Reading Progress
 function trackReadingProgress() {
     if (typeof gtag === 'undefined' || getCookie('cookie-consent') !== 'all') return;
-    
+
     let tracked25 = false, tracked50 = false, tracked75 = false, tracked100 = false;
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         const winHeight = window.innerHeight;
         const docHeight = document.documentElement.scrollHeight;
         const scrollTop = window.pageYOffset;
         const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
-        
+
         if (scrollPercent >= 25 && !tracked25) {
             gtag('event', 'scroll', {
                 'event_category': 'engagement',
@@ -250,25 +302,25 @@ function trackReadingProgress() {
             });
             tracked25 = true;
         }
-        
+
         if (scrollPercent >= 50 && !tracked50) {
             gtag('event', 'scroll', {
-                'event_category': 'engagement', 
+                'event_category': 'engagement',
                 'event_label': '50_percent',
                 'value': 50
             });
             tracked50 = true;
         }
-        
+
         if (scrollPercent >= 75 && !tracked75) {
             gtag('event', 'scroll', {
                 'event_category': 'engagement',
-                'event_label': '75_percent', 
+                'event_label': '75_percent',
                 'value': 75
             });
             tracked75 = true;
         }
-        
+
         if (scrollPercent >= 90 && !tracked100) {
             gtag('event', 'scroll', {
                 'event_category': 'engagement',
@@ -283,11 +335,11 @@ function trackReadingProgress() {
 // Track Outbound Links
 function trackOutboundLinks() {
     if (typeof gtag === 'undefined' || getCookie('cookie-consent') !== 'all') return;
-    
-    document.addEventListener('click', function(e) {
+
+    document.addEventListener('click', function (e) {
         const link = e.target.closest('a');
         if (!link) return;
-        
+
         const href = link.getAttribute('href');
         if (href && (href.startsWith('http') && !href.includes(window.location.hostname))) {
             gtag('event', 'click', {
@@ -302,14 +354,14 @@ function trackOutboundLinks() {
 // Track File Downloads
 function trackDownloads() {
     if (typeof gtag === 'undefined' || getCookie('cookie-consent') !== 'all') return;
-    
-    document.addEventListener('click', function(e) {
+
+    document.addEventListener('click', function (e) {
         const link = e.target.closest('a');
         if (!link) return;
-        
+
         const href = link.getAttribute('href');
         const downloadExtensions = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.rar'];
-        
+
         if (href && downloadExtensions.some(ext => href.toLowerCase().includes(ext))) {
             gtag('event', 'file_download', {
                 'event_category': 'engagement',
@@ -335,13 +387,13 @@ function trackSiteSearch(query, results = 0) {
 // Track Time on Page
 function trackTimeOnPage() {
     if (typeof gtag === 'undefined' || getCookie('cookie-consent') !== 'all') return;
-    
+
     const startTime = Date.now();
     let tracked15 = false, tracked30 = false, tracked60 = false;
-    
-    setInterval(function() {
+
+    setInterval(function () {
         const timeOnPage = Math.floor((Date.now() - startTime) / 1000);
-        
+
         if (timeOnPage >= 15 && !tracked15) {
             gtag('event', 'timing_complete', {
                 'event_category': 'engagement',
@@ -350,16 +402,16 @@ function trackTimeOnPage() {
             });
             tracked15 = true;
         }
-        
+
         if (timeOnPage >= 30 && !tracked30) {
             gtag('event', 'timing_complete', {
                 'event_category': 'engagement',
-                'event_label': '30_seconds', 
+                'event_label': '30_seconds',
                 'value': 30
             });
             tracked30 = true;
         }
-        
+
         if (timeOnPage >= 60 && !tracked60) {
             gtag('event', 'timing_complete', {
                 'event_category': 'engagement',
@@ -372,7 +424,7 @@ function trackTimeOnPage() {
 }
 
 // Initialize all tracking on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Only initialize if consent is given
     if (getCookie('cookie-consent') === 'all') {
         trackReadingProgress();

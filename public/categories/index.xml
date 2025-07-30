@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on USC Ente del Terzo Settore</title>
-    <link>https://uscterzosettore.it/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-it</language>
     <lastBuildDate>Tue, 29 Jul 2025 15:48:46 +0000</lastBuildDate>
-    <atom:link href="https://uscterzosettore.it/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tutela Legale</title>
-      <link>https://uscterzosettore.it/categories/tutela-legale/</link>
+      <link>http://localhost:1313/categories/tutela-legale/</link>
       <pubDate>Tue, 29 Jul 2025 13:53:00 +0200</pubDate>
-      <guid>https://uscterzosettore.it/categories/tutela-legale/</guid>
+      <guid>http://localhost:1313/categories/tutela-legale/</guid>
       <description></description>
     </item>
     <item>
       <title>Assistenza Sanitaria</title>
-      <link>https://uscterzosettore.it/categories/assistenza-sanitaria/</link>
+      <link>http://localhost:1313/categories/assistenza-sanitaria/</link>
       <pubDate>Tue, 29 Jul 2025 13:45:00 +0200</pubDate>
-      <guid>https://uscterzosettore.it/categories/assistenza-sanitaria/</guid>
+      <guid>http://localhost:1313/categories/assistenza-sanitaria/</guid>
       <description></description>
     </item>
   </channel>

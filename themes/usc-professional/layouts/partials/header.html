@@ -4,20 +4,12 @@
             <div class="header-logo">
 
                 <div class="site-logo">
-                    <a href="{{ " /" | relURL }}" title="{{ .Site.Title }}">
+                    <a href="{{ "/" | relURL }}" title="{{ .Site.Title }}">
                         <img src="/images/logo-usc.jpg" alt="USC" class="logo-img">
                     </a>
                 </div>
                 <!-- Header Actions -->
                 <div class="header-actions">
-                    <!-- Search Icon (future implementation) -->
-                    <!-- <button class="search-toggle" aria-label="Cerca">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="M21 21l-4.35-4.35"></path>
-                </svg>
-            </button> -->
-
                     <!-- Newsletter Subscribe Button -->
                     <a href="#newsletter" class="subscribe-btn">
                         ISCRIVITI ORA!
@@ -70,8 +62,6 @@
             </div>
         </div>
 
-
-
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" aria-label="Menu">
             <span class="hamburger"></span>
@@ -80,20 +70,89 @@
         </button>
     </div>
 </header>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
 
-<!-- Mobile Navigation -->
-<nav class="mobile-navigation">
-    <ul class="mobile-nav-menu">
-        <li><a href="{{ " /" | relURL }}">HOME</a></li>
-        <li class="mobile-dropdown">
-            <a href="{{ " /categories/" | relURL }}">CATEGORIE</a>
-            <ul class="mobile-dropdown-menu">
-                {{ range .Site.Taxonomies.categories }}
-                <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
-                {{ end }}
-            </ul>
-        </li>
-        <li><a href="{{ " /chi-siamo/" | relURL }}">CHI SIAMO</a></li>
-        <li><a href="#newsletter" class="mobile-subscribe">ISCRIVITI ORA!</a></li>
-    </ul>
-</nav>
+    <!-- Mobile Navigation - mantiene il tuo layout -->
+    <nav class="mobile-navigation">
+        <!-- Header del menu -->
+        <div class="mobile-header">
+            <div class="mobile-logo">
+                <img src="/images/logo-usc.jpg" alt="USC">
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="#newsletter" class="mobile-subscribe-header">ISCRIVITI ORA!</a>
+                <button class="mobile-close" aria-label="Chiudi menu">×</button>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="/" class="active">
+                    <div style="display: flex; align-items: center;">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                        </svg>
+                        HOME
+                    </div>
+                </a>
+            </li>
+
+            <li class="has-dropdown">
+                <a href="#" class="dropdown-toggle">
+                    <div style="display: flex; align-items: center;">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        CATEGORIE
+                    </div>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </a>
+                
+                <div class="mobile-dropdown-menu">
+                    <a href="/categories/agricoltura-sociale/">Agricoltura Sociale</a>
+                    <a href="/categories/tutela-legale/">Tutela Legale</a>
+                    <a href="/categories/assistenza-sanitaria/">Assistenza Sanitaria</a>
+                    <a href="/categories/patronato/">Patronato</a>
+                    <a href="/categories/giovani-idee/">Giovani Idee</a>
+                    <a href="/categories/donazioni/">Donazioni</a>
+                    <a href="/categories/news/">News</a>
+                    <a href="/categories/" style="font-weight: 600; color: #1976d2;">Vedi tutte le categorie →</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/chi-siamo/">
+                    <div style="display: flex; align-items: center;">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        CHI SIAMO
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/contatti/">
+                    <div style="display: flex; align-items: center;">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        CONTATTI
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Footer Newsletter -->
+        <div class="mobile-menu-footer">
+            <a href="#newsletter" class="newsletter-cta">
+                🚀 ISCRIVITI ALLA NEWSLETTER
+            </a>
+        </div>
+    </nav>
