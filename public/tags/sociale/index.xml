@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>News on USC Ente del Terzo Settore</title>
-    <link>http://localhost:1313/categories/news/</link>
-    <description>Recent content in News on USC Ente del Terzo Settore</description>
+    <title>Sociale on USC Ente del Terzo Settore</title>
+    <link>http://localhost:1313/tags/sociale/</link>
+    <description>Recent content in Sociale on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
     <lastBuildDate>Wed, 30 Jul 2025 11:12:41 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/sociale/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Il Terzo Settore in Italia</title>
       <link>http://localhost:1313/posts/2025/07/il-terzo-settore-in-italia/</link>

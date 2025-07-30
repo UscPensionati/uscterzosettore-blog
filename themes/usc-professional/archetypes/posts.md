@@ -1,13 +1,14 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+date: {{ .Date.Format "2006-01-02T15:04:05Z07:00" }}
 draft: true
-category: ""
-featured_image: ""
-excerpt: ""
+categories: []
+cover:
+  image: ""
+  alt: ""
+description: ""
 author: "Redazione USC"
 tags: []
-description: ""
 ---
 
 # {{ replace .Name "-" " " | title }}

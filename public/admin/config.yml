@@ -12,6 +12,9 @@ logo_url: /images/logo-usc.png
 show_preview_links: true
 publish_mode: editorial_workflow
 
+# LOCALE ITALIANO - AGGIUNTO
+locale: 'it'
+
 collections:
   - name: "posts"
     label: "📝 Articoli Blog"
@@ -27,12 +30,18 @@ collections:
       - label: "Data Pubblicazione"
         name: "date"
         widget: "datetime"
-        format: "YYYY-MM-DDTHH:mm:ssZ"
+        # FORMAT FIX - Timezone italiano
+        format: "YYYY-MM-DDTHH:mm:ssZZ"
+        date_format: "DD/MM/YYYY"
+        time_format: "HH:mm"
+        picker_utc: false
         
       - label: "Categoria"
         name: "categories"
         widget: "select"
-        multiple: false
+        multiple: true
+        min: 1
+        max: 1
         options:
           - "Agricoltura Sociale"
           - "Tutela Legale"
@@ -41,7 +50,7 @@ collections:
           - "Giovani Idee"
           - "Donazioni"
           - "News"
-        default: []
+        default: ["News"]
         
       - label: "Immagine Copertina"
         name: "cover"
@@ -62,11 +71,18 @@ collections:
         name: "description"
         widget: "text"
         required: false
+        hint: "Breve descrizione dell'articolo per SEO e anteprima"
         
       - label: "Autore"
         name: "author"
         widget: "string"
         default: "Redazione USC"
+        
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Aggiungi tag separati da virgola"
         
       - label: "Contenuto"
         name: "body"

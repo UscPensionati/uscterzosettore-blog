@@ -1,13 +1,17 @@
 baseURL = 'https://uscterzosettore.it'
-languageCode = 'it-it'
+languageCode = 'it-IT'
 title = 'USC Ente del Terzo Settore'
 theme = 'usc-professional'
 
 # Content settings
 defaultContentLanguage = 'it'
+defaultContentLanguageInSubdir = false
 hasCJKLanguage = false
 enableEmoji = true
 enableGitInfo = true
+
+# TIMEZONE E DATE - AGGIUNTO
+timeZone = 'Europe/Rome'
 
 # Build settings
 buildDrafts = false
@@ -34,6 +38,24 @@ relativeURLs = false
   posts = '/posts/:year/:month/:slug/'
   categories = '/categories/:slug/'
 
+# CONFIGURAZIONE LINGUA ITALIANA - AGGIUNTO
+[languages]
+  [languages.it]
+    languageCode = 'it-IT'
+    languageName = 'Italiano'
+    weight = 1
+    title = 'USC Ente del Terzo Settore'
+    
+    [languages.it.params]
+      description = 'Blog ufficiale USC Ente del Terzo Settore - Notizie, approfondimenti e risorse dal mondo del terzo settore italiano'
+      
+    # Date format personalizzati per l'italiano
+    [languages.it.dates]
+      month_names = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+      month_names_short = ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"]
+      day_names = ["domenica", "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"]
+      day_names_short = ["dom", "lun", "mar", "mer", "gio", "ven", "sab"]
+
 # Site parameters
 [params]
   description = 'Blog ufficiale USC Ente del Terzo Settore - Notizie, approfondimenti e risorse dal mondo del terzo settore italiano'
@@ -49,7 +71,7 @@ relativeURLs = false
   
   # Newsletter
   newsletter_signup = true
-  convertkit_form_uid = '' # Da configurare con ConvertKit
+  convertkit_form_uid = ''
   
   # Analytics
   google_analytics = 'G-7XY2JTE4PN'
@@ -103,15 +125,9 @@ relativeURLs = false
     weight = 20
 
   [[menu.footer]]
-    name = 'Privacy Policy'
-    url = '/privacy/'
-    weight = 10
-  
-  [[menu.footer]]
     name = 'Cookie Policy'  
     url = '/cookie-policy/'
     weight = 15
-  
 
 # Markup configuration
 [markup]
@@ -190,7 +206,7 @@ relativeURLs = false
     methods = ['(?i)GET|POST']
     urls = ['.*']
 
-# Module configuration (if using Hugo modules)
+# Module configuration
 [module]
   [module.hugoVersion]
     extended = false

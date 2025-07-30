@@ -1,42 +1,144 @@
 ﻿{{ define "main" }}
-<div style="padding: 2rem; font-family: monospace; background: #f0f0f0; border: 2px solid red;">
-    <h1 style="color: red;">INFORMAZIONI DI DEBUG</h1>
+<div class="homepage-container">
 
-    <h2>Elenco Post (Senza Ordinamento Specifico)</h2>
-    <p>Questa è la lista dei post come li trova Hugo, prima di ordinarli.</p>
-    <ol>
-        {{ range where .Site.RegularPages "Type" "posts" }}
-            <li style="margin-bottom: 1rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem;">
-                <strong>Titolo:</strong> {{ .Title }} <br>
-                <strong>Data Letta dal File:</strong> {{ .Date.Format "2 Jan 2006" }} <br>
-                <strong>Percorso del File:</strong> {{ .File.Path }}
-            </li>
+  {{/* 1. Prendiamo TUTTI i post e li ORDiniamo per data, una sola volta */}}
+  {{ $allPostsSorted := (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
+
+  {{/* 2. Prendiamo solo il primo post dalla lista ordinata (il più nuovo) */}}
+  {{ $latestPost := first 1 $allPostsSorted }}
+
+  {{/* 3. Usiamo un 'range' per visualizzare il post più nuovo */}}
+  {{ range $latestPost }}
+  <section class="latest-post-hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        {{ with .Params.cover }}
+          <img src="{{ .image }}" alt="{{ .alt | default $.Title }}" loading="lazy" />
+        {{ else }}
+          <div class="hero-image-placeholder">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+              <circle cx="12" cy="13" r="3" />
+            </svg>
+            <span>USC</span>
+          </div>
         {{ end }}
-    </ol>
+      </div>
 
-    <hr style="margin: 2rem 0;">
+      <div class="hero-text">
+        <div class="hero-meta">
+          <span class="hero-label">NUOVO!</span>
+          {{/* DATA FIX - Formato Italiano */}}
+          <span class="hero-date">
+            {{ $day := .Date.Day }}
+            {{ $month := index (slice "gen" "feb" "mar" "apr" "mag" "giu" "lug" "ago" "set" "ott" "nov" "dic") (sub .Date.Month 1) }}
+            {{ $year := .Date.Year }}
+            {{ $day }} {{ upper $month }} {{ $year }}
+          </span>
+          {{ with .Params.categories }}
+            <span class="hero-category">{{ index . 0 }}</span>
+          {{ end }}
+        </div>
 
-    <h2>Elenco Post (DOPO l'Ordinamento per Data)</h2>
-    <p>Questa è la lista dopo aver applicato <code>.ByDate.Reverse</code>. Il primo elemento dovrebbe essere il più recente.</p>
-    <ol>
-        {{ range (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
-             <li style="margin-bottom: 1rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem;">
-                <strong>Titolo:</strong> {{ .Title }} <br>
-                <strong>Data Letta dal File:</strong> {{ .Date.Format "2 Jan 2006" }} <br>
-                <strong>Percorso del File:</strong> {{ .File.Path }}
-            </li>
-        {{ end }}
-    </ol>
+        <h1 class="hero-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h1>
 
-    <hr style="margin: 2rem 0;">
+        <div class="hero-excerpt">
+          {{ if .Params.description }}
+            <p>{{ .Params.description }}</p>
+          {{ else if .Summary }}
+            <p>{{ .Summary }}</p>
+          {{ end }}
+        </div>
 
-    <h2>Post Selezionato come "latestPost"</h2>
-     {{ $latestPost := index ((where .Site.RegularPages "Type" "posts").ByDate.Reverse) 0 }}
-    <div style="background: #e6ffed; padding: 1rem; border: 1px solid green;">
-        <p>Questo è il post che la tua homepage dovrebbe mostrare.</p>
-        <strong>Titolo:</strong> {{ $latestPost.Title }} <br>
-        <strong>Data:</strong> {{ $latestPost.Date.Format "2 JAN 2006" }}
+        <div class="hero-footer">
+          <div class="hero-author">
+            {{ .Params.author | default "Redazione USC" }}
+          </div>
+          <div class="hero-reading-time">
+            {{ $readingTime := div .WordCount 200 }} 
+            {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} MIN LETTURA
+          </div>
+          <a href="{{ .Permalink }}" class="hero-read-more">
+            Leggi tutto →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* 4. Sezione "Altri Articoli" */}}
+  <section class="more-posts-section">
+    <div class="section-header">
+      <h2 class="section-title">ALTRI ARTICOLI</h2>
+      <div class="section-subtitle">
+        Scopri tutti i nostri contenuti
+      </div>
     </div>
 
+    {{/* Usiamo la stessa lista ordinata di prima, saltando il primo articolo */}}
+    {{ if gt (len $allPostsSorted) 1 }}
+    <div class="posts-grid">
+      {{ range first 3 (after 1 $allPostsSorted) }}
+      <article class="post-card">
+        {{ with .Params.cover }}
+          <div class="post-card-image">
+            <a href="{{ .Permalink }}">
+              <img src="{{ .image }}" alt="{{ .Title }}" loading="lazy" />
+            </a>
+          </div>
+        {{ end }}
+        <div class="post-card-content">
+          <div class="post-card-meta">
+            {{ with .Params.categories }}
+              <span class="post-card-category">{{ index . 0 }}</span>
+            {{ end }}
+            {{/* DATA FIX - Formato Italiano */}}
+            <span class="post-card-date">
+              {{ $day := .Date.Day }}
+              {{ $month := index (slice "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre") (sub .Date.Month 1) }}
+              {{ $year := .Date.Year }}
+              {{ $day }} {{ $month }} {{ $year }}
+            </span>
+          </div>
+          <h3 class="post-card-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="post-card-excerpt">{{ .Summary | plainify | truncate 150 }}</p>
+          <div class="post-card-footer">
+            <span class="post-card-author">
+              {{ .Params.author | default "Redazione USC" }}
+            </span>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+
+  {{/* 5. Sidebar e resto della pagina */}}
+  <aside class="homepage-sidebar">
+     <div class="about-card">
+       <h3 class="about-title">NEWSLETTER</h3>
+       <div class="about-content">
+         <div class="about-logo">
+           <img src="/images/logo-usc.jpg" alt="USC" class="about-logo-img" />
+           <h4>USC Ente del Terzo Settore</h4>
+         </div>
+         <p class="about-description">
+           USC è un'associazione del Terzo Settore impegnata a offrire servizi di qualità a tutti coloro che si trovano in condizioni di difficoltà o svantaggio.
+         </p>
+         <div class="about-cta">
+           <p>
+             Registrati subito per avere accesso alla biblioteca dei numeri riservati ai soci.
+           </p>
+           {{ partial "newsletter-form.html" . }}
+         </div>
+       </div>
+     </div>
+   </aside>
 </div>
 {{ end }}

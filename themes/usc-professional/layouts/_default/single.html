@@ -7,7 +7,13 @@
             {{ if .Params.category }}
             <span class="post-category">{{ .Params.category }}</span>
             {{ end }}
-            <span class="post-date">{{ .Date.Format "2 JANUARY 2006" }}</span>
+            {{/* DATA FIX - Formato Italiano Completo */}}
+            <span class="post-date">
+              {{ $day := .Date.Day }}
+              {{ $month := index (slice "GENNAIO" "FEBBRAIO" "MARZO" "APRILE" "MAGGIO" "GIUGNO" "LUGLIO" "AGOSTO" "SETTEMBRE" "OTTOBRE" "NOVEMBRE" "DICEMBRE") (sub .Date.Month 1) }}
+              {{ $year := .Date.Year }}
+              {{ $day }} {{ $month }} {{ $year }}
+            </span>
         </div>
         
         <h1 class="post-title">{{ .Title }}</h1>
@@ -23,7 +29,7 @@
             <span class="post-reading-time">
                 {{ $wordCount := .WordCount }}
                 {{ $readingTime := div $wordCount 200 }}
-                {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} MIN READ
+                {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} MIN LETTURA
             </span>
             {{ if .Params.tags }}
             <div class="post-tags">
@@ -130,7 +136,13 @@
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
                     </h4>
                     <div class="related-post-meta">
-                        <span class="related-post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+                        {{/* DATA FIX - Formato Italiano */}}
+                        <span class="related-post-date">
+                          {{ $day := .Date.Day }}
+                          {{ $month := index (slice "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre") (sub .Date.Month 1) }}
+                          {{ $year := .Date.Year }}
+                          {{ $day }} {{ $month }} {{ $year }}
+                        </span>
                         {{ if .Params.category }}
                         <span class="related-post-category">{{ .Params.category }}</span>
                         {{ end }}
