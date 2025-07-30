@@ -1,7 +1,7 @@
 ﻿{{ define "main" }}
 <div class="homepage-container">
-  {{ $latestPost := index (where .Site.RegularPages "Type" "posts") 0 }} {{ if
-  $latestPost }}
+  {{ $latestPost := index ((where .Site.RegularPages "Type"
+  "posts").ByDate.Reverse) 0 }} {{ if $latestPost }}
   <section class="latest-post-hero">
     <div class="hero-content">
       <div class="hero-image">
@@ -143,7 +143,8 @@
 
         <div class="about-cta">
           <p>
-            Registrati subito per avere accesso alla biblioteca dei numeri riservati ai soci.
+            Registrati subito per avere accesso alla biblioteca dei numeri
+            riservati ai soci.
           </p>
           <div class="newsletter-signup-mini">
             <input
