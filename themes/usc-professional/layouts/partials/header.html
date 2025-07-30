@@ -8,23 +8,8 @@
                         <img src="/images/logo-usc.jpg" alt="USC" class="logo-img">
                     </a>
                 </div>
-                <!-- Header Actions -->
-                <div class="header-actions">
-                    <!-- Newsletter Subscribe Button -->
-                    <a href="#newsletter" class="subscribe-btn">
-                        ISCRIVITI ORA!
-                    </a>
 
-                    <!-- Admin Login (visible only to authenticated users) -->
-                    {{ if hugo.IsServer }}
-                    <a href="/admin/" class="admin-link" target="_blank">
-                        ADMIN
-                    </a>
-                    {{ end }}
-                </div>
-            </div>
-
-            <div>
+                            <div>
                 <nav class="main-navigation">
                     <ul class="nav-menu">
                         <li class="nav-item">
@@ -60,6 +45,21 @@
                     </ul>
                 </nav>
             </div>
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Newsletter Subscribe Button -->
+                    <a href="#newsletter" class="subscribe-btn">
+                        ISCRIVITI ORA
+                    </a>
+
+                    <!-- Admin Login (visible only to authenticated users) -->
+                    {{ if hugo.IsServer }}
+                    <a href="/admin/" class="admin-link" target="_blank">
+                        ADMIN
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -81,7 +81,7 @@
                 <img src="/images/logo-usc.jpg" alt="USC">
             </div>
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="#newsletter" class="mobile-subscribe-header">ISCRIVITI ORA!</a>
+                <a href="#newsletter" class="mobile-subscribe-header">ISCRIVITI ORA</a>
                 <button class="mobile-close" aria-label="Chiudi menu">×</button>
             </div>
         </div>

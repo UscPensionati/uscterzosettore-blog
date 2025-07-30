@@ -1120,7 +1120,7 @@ select {
 }
 
 .subscribe-button {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #2d2d2d 100%);
+  background: linear-gradient(178deg, var(--color-primary) 0%, #000000 100%);
   color: var(--color-bg);
   padding: var(--space-5) var(--space-8);
   font-weight: var(--weight-bold);
@@ -1142,7 +1142,7 @@ select {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(178deg, var(--color-primary) 0%, #2d2d2d 100%);
   transition: left 0.5s;
 }
 
@@ -1151,7 +1151,7 @@ select {
 }
 
 .subscribe-button:hover {
-  background: linear-gradient(135deg, #2d2d2d 0%, var(--color-primary) 100%);
+  background: linear-gradient(178deg, var(--color-primary) 0%, #983434 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
@@ -1171,7 +1171,7 @@ select {
   font-size: 0.9rem;
 }
 
-.consent-text-white a{
+.consent-text-white a {
   font-weight: 700;
   text-decoration: underline;
 }
@@ -1270,8 +1270,9 @@ select {
 }
 
 .footer-logo {
-  text-align: center;
   margin-bottom: var(--space-8);
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo-img {

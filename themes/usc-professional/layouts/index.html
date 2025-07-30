@@ -1,42 +1,51 @@
 ﻿{{ define "main" }}
 <div class="homepage-container">
-
-  {{/* 1. Prendiamo TUTTI i post e li ORDiniamo per data, una sola volta */}}
-  {{ $allPostsSorted := (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
-
+  {{/* 1. Prendiamo TUTTI i post e li ORDiniamo per data, una sola volta */}} {{
+  $allPostsSorted := (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
   {{/* 2. Prendiamo solo il primo post dalla lista ordinata (il più nuovo) */}}
-  {{ $latestPost := first 1 $allPostsSorted }}
-
-  {{/* 3. Usiamo un 'range' per visualizzare il post più nuovo */}}
-  {{ range $latestPost }}
+  {{ $latestPost := first 1 $allPostsSorted }} {{/* 3. Usiamo un 'range' per
+  visualizzare il post più nuovo */}} {{ range $latestPost }}
   <section class="latest-post-hero">
     <div class="hero-content">
       <div class="hero-image">
         {{ with .Params.cover }}
-          <img src="{{ .image }}" alt="{{ .alt | default $.Title }}" loading="lazy" />
+        <img
+          src="{{ .image }}"
+          alt="{{ .alt | default $.Title }}"
+          loading="lazy"
+        />
         {{ else }}
-          <div class="hero-image-placeholder">
-            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-              <circle cx="12" cy="13" r="3" />
-            </svg>
-            <span>USC</span>
-          </div>
+        <div class="hero-image-placeholder">
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"
+            />
+            <circle cx="12" cy="13" r="3" />
+          </svg>
+          <span>USC</span>
+        </div>
         {{ end }}
       </div>
 
       <div class="hero-text">
         <div class="hero-meta">
-          <span class="hero-label">NUOVO!</span>
+          <span class="hero-label">NUOVO</span>
           {{/* DATA FIX - Formato Italiano */}}
           <span class="hero-date">
-            {{ $day := .Date.Day }}
-            {{ $month := index (slice "gen" "feb" "mar" "apr" "mag" "giu" "lug" "ago" "set" "ott" "nov" "dic") (sub .Date.Month 1) }}
-            {{ $year := .Date.Year }}
-            {{ $day }} {{ upper $month }} {{ $year }}
+            {{ $day := .Date.Day }} {{ $month := index (slice "gen" "feb" "mar"
+            "apr" "mag" "giu" "lug" "ago" "set" "ott" "nov" "dic") (sub
+            .Date.Month 1) }} {{ $year := .Date.Year }} {{ $day }} {{ upper
+            $month }} {{ $year }}
           </span>
           {{ with .Params.categories }}
-            <span class="hero-category">{{ index . 0 }}</span>
+          <span class="hero-category">{{ index . 0 }}</span>
           {{ end }}
         </div>
 
@@ -46,9 +55,9 @@
 
         <div class="hero-excerpt">
           {{ if .Params.description }}
-            <p>{{ .Params.description }}</p>
+          <p>{{ .Params.description }}</p>
           {{ else if .Summary }}
-            <p>{{ .Summary }}</p>
+          <p>{{ .Summary }}</p>
           {{ end }}
         </div>
 
@@ -57,56 +66,51 @@
             {{ .Params.author | default "Redazione USC" }}
           </div>
           <div class="hero-reading-time">
-            {{ $readingTime := div .WordCount 200 }} 
-            {{ if lt $readingTime 1 }}1{{ else }}{{ $readingTime }}{{ end }} MIN LETTURA
+            {{ $readingTime := div .WordCount 200 }} {{ if lt $readingTime 1
+            }}1{{ else }}{{ $readingTime }}{{ end }} MIN LETTURA
           </div>
-          <a href="{{ .Permalink }}" class="hero-read-more">
-            Leggi tutto →
-          </a>
+          <a href="{{ .Permalink }}" class="hero-read-more"> Leggi tutto → </a>
         </div>
       </div>
     </div>
   </section>
-  {{ end }}
-
-  {{/* 4. Sezione "Altri Articoli" */}}
+  {{ end }} {{/* 4. Sezione "Altri Articoli" */}}
   <section class="more-posts-section">
     <div class="section-header">
       <h2 class="section-title">ALTRI ARTICOLI</h2>
-      <div class="section-subtitle">
-        Scopri tutti i nostri contenuti
-      </div>
+      <div class="section-subtitle">Scopri tutti i nostri contenuti</div>
     </div>
 
-    {{/* Usiamo la stessa lista ordinata di prima, saltando il primo articolo */}}
-    {{ if gt (len $allPostsSorted) 1 }}
+    {{/* Usiamo la stessa lista ordinata di prima, saltando il primo articolo
+    */}} {{ if gt (len $allPostsSorted) 1 }}
     <div class="posts-grid">
       {{ range first 3 (after 1 $allPostsSorted) }}
       <article class="post-card">
         {{ with .Params.cover }}
-          <div class="post-card-image">
-            <a href="{{ .Permalink }}">
-              <img src="{{ .image }}" alt="{{ .Title }}" loading="lazy" />
-            </a>
-          </div>
+        <div class="post-card-image">
+          <a href="{{ .Permalink }}">
+            <img src="{{ .image }}" alt="{{ .Title }}" loading="lazy" />
+          </a>
+        </div>
         {{ end }}
         <div class="post-card-content">
           <div class="post-card-meta">
             {{ with .Params.categories }}
-              <span class="post-card-category">{{ index . 0 }}</span>
-            {{ end }}
-            {{/* DATA FIX - Formato Italiano */}}
+            <span class="post-card-category">{{ index . 0 }}</span>
+            {{ end }} {{/* DATA FIX - Formato Italiano */}}
             <span class="post-card-date">
-              {{ $day := .Date.Day }}
-              {{ $month := index (slice "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre") (sub .Date.Month 1) }}
-              {{ $year := .Date.Year }}
-              {{ $day }} {{ $month }} {{ $year }}
+              {{ $day := .Date.Day }} {{ $month := index (slice "gennaio"
+              "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto"
+              "settembre" "ottobre" "novembre" "dicembre") (sub .Date.Month 1)
+              }} {{ $year := .Date.Year }} {{ $day }} {{ $month }} {{ $year }}
             </span>
           </div>
           <h3 class="post-card-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h3>
-          <p class="post-card-excerpt">{{ .Summary | plainify | truncate 150 }}</p>
+          <p class="post-card-excerpt">
+            {{ .Summary | plainify | truncate 150 }}
+          </p>
           <div class="post-card-footer">
             <span class="post-card-author">
               {{ .Params.author | default "Redazione USC" }}
@@ -118,27 +122,5 @@
     </div>
     {{ end }}
   </section>
-
-  {{/* 5. Sidebar e resto della pagina */}}
-  <aside class="homepage-sidebar">
-     <div class="about-card">
-       <h3 class="about-title">NEWSLETTER</h3>
-       <div class="about-content">
-         <div class="about-logo">
-           <img src="/images/logo-usc.jpg" alt="USC" class="about-logo-img" />
-           <h4>USC Ente del Terzo Settore</h4>
-         </div>
-         <p class="about-description">
-           USC è un'associazione del Terzo Settore impegnata a offrire servizi di qualità a tutti coloro che si trovano in condizioni di difficoltà o svantaggio.
-         </p>
-         <div class="about-cta">
-           <p>
-             Registrati subito per avere accesso alla biblioteca dei numeri riservati ai soci.
-           </p>
-           {{ partial "newsletter-form.html" . }}
-         </div>
-       </div>
-     </div>
-   </aside>
 </div>
 {{ end }}
