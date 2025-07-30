@@ -41,7 +41,6 @@ collections:
           - "Giovani Idee"
           - "Donazioni"
           - "News"
-        # QUESTA È LA CHIAVE: forza il salvataggio come array
         default: []
         
       - label: "Immagine Copertina"
