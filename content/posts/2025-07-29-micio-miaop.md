@@ -1,182 +1,192 @@
 ---
-title: Test post 02
-date: 2025-07-29T13:53:00+02:00
-categories:
-  - Tutela Legale
+title: "Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future"
+date: 2025-07-30T12:04:00+02:00
+categories: News
 cover:
   image: https://cdn.pixabay.com/photo/2024/11/18/10/20/businessman-9205819_1280.png
-description: >-
-  Certamente, ecco un testo lorem ipsum.
-
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-author: Andrea de Pasquale
+description: >
+  In Italia il Terzo Settore rappresenta molto più di un insieme di associazioni
+  e cooperative: è un pilastro del welfare, un attore economico rilevante e una
+  rete di solidarietà che tiene insieme la società. Con oltre 360 mila enti non
+  profit, quasi 900 mila lavoratori e più di 4,5 milioni di volontari, il Terzo
+  Settore incide profondamente sulla vita quotidiana delle persone e
+  contribuisce al 4,4% del PIL nazionale.
+author: Redazione USC
 ---
-Certamente. Ecco una bozza di articolo di circa 1000 parole sul tema dell'assistenza sanitaria, pensata per essere un contenuto utile e approfondito per un blog.
+Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future
 
 
 
-La Tua Bussola per la Salute: Guida Pratica per Orientarsi nel Servizio Sanitario Nazionale
 
-Il Servizio Sanitario Nazionale (SSN) italiano Ã¨ uno dei pilastri del nostro welfare, un sistema universalistico che garantisce a tutti i cittadini l'accesso alle cure. Tuttavia, per chi non ne conosce i meccanismi, orientarsi tra medici di base, impegnative, prenotazioni e ticket puÃ² sembrare un percorso a ostacoli. La realtÃ  Ã¨ che, con le giuste informazioni, il sistema diventa uno strumento potente e accessibile per la tutela della nostra salute.
 
 
 
-Questo articolo vuole essere la tua bussola: una guida chiara e pratica per navigare con serenitÃ  nel mondo dell'assistenza sanitaria. Impareremo insieme a conoscere i protagonisti, a decifrare il linguaggio e a utilizzare gli strumenti digitali che rendono tutto piÃ¹ semplice, trasformandoci da pazienti disorientati a cittadini consapevoli e proattivi nella gestione del proprio benessere.
+In Italia il Terzo Settore rappresenta molto più di un insieme di associazioni e cooperative: è un pilastro del welfare, un attore economico rilevante e una rete di solidarietà che tiene insieme la società. Con oltre 360 mila enti non profit, quasi 900 mila lavoratori e più di 4,5 milioni di volontari, il Terzo Settore incide profondamente sulla vita quotidiana delle persone e contribuisce al 4,4% del PIL nazionale.
 
 
 
-1. Il Primo Passo: Il Medico di Medicina Generale (MMG)
+Ma qual è il suo vero impatto sul territorio? Come sostiene le fasce più fragili della popolazione? Quali sono le sue potenzialità inespresse e quali criticità affronta oggi? In questo articolo analizziamo il ruolo sociale del Terzo Settore in Italia, la sua capacità di promuovere coesione, inclusione e sviluppo locale, ma anche le sfide che ne minacciano la sostenibilità.
 
-Il tuo viaggio nell'assistenza sanitaria inizia quasi sempre da una figura centrale: il Medico di Medicina Generale (MMG), comunemente noto come "medico di base". Non Ã¨ semplicemente colui che firma le ricette, ma il tuo primo alleato e il principale punto di riferimento per la tua salute. Ãˆ il regista che coordina il tuo percorso di cura, conosce la tua storia clinica e ti indirizza verso gli specialisti piÃ¹ adatti quando necessario.
 
 
 
-Come si sceglie? La scelta (o il cambio) del medico di base si effettua presso gli uffici dell'Azienda Sanitaria Locale (ASL) di competenza territoriale. Oggi, molte regioni permettono di compiere questa operazione anche online, attraverso il portale del Fascicolo Sanitario Elettronico, utilizzando le proprie credenziali SPID o la Carta d'IdentitÃ  Elettronica (CIE).
 
 
 
-Cosa fa per te?
+Che cos’è il Terzo Settore?
 
 
 
-Prescrizioni: Farmaci, visite specialistiche, esami diagnostici.
 
 
 
-Certificati: Malattia per il datore di lavoro, attivitÃ  sportiva non agonistica.
 
+Il Terzo Settore opera in moltissimi ambiti: dall'assistenza sociale alla tutela della salute, dalla promozione culturale allo sport, dalla protezione civile all’inserimento lavorativo. La sua forza è nella capillarità territoriale e nella prossimità ai bisogni reali delle persone.
 
 
-Gestione della salute: Monitora le patologie croniche, promuove campagne di prevenzione (come le vaccinazioni) e ti aiuta a mantenere uno stile di vita sano.
 
+Durante la pandemia, le organizzazioni non profit sono state in prima linea nel contrastare nuove forme di vulnerabilità. Reti di volontari, associazioni locali e cooperative sociali hanno garantito supporto là dove lo Stato non arrivava, confermandosi come veri “ammortizzatori sociali” in tempi di crisi.
 
 
-Costruire un rapporto di fiducia con il proprio MMG Ã¨ fondamentale. Non aver timore di fare domande, esporre i tuoi dubbi e renderlo partecipe della tua salute in modo trasparente. Un dialogo aperto Ã¨ la base per un'assistenza efficace.
 
+Le attività del Terzo Settore alimentano la partecipazione civica, rinforzano il senso di comunità e contribuiscono a creare legami di fiducia nei territori. In una società sempre più frammentata, questo è un patrimonio da proteggere e valorizzare.
 
 
-2. La Richiesta del Medico: L'Impegnativa Elettronica
 
-Quando il tuo medico ritiene necessario un approfondimento specialistico o un esame, emette una "impegnativa", oggi quasi sempre in formato elettronico (ricetta dematerializzata). Questo documento non Ã¨ una semplice richiesta, ma la chiave d'accesso alle prestazioni del SSN.
 
 
 
-L'impegnativa contiene informazioni cruciali: i tuoi dati, la prestazione richiesta e, soprattutto, un codice di prioritÃ . Questo codice indica l'urgenza della prestazione:
 
+Cosa fa il Terso settore?
 
 
-U (Urgente): Da eseguire nel piÃ¹ breve tempo possibile, entro 72 ore.
 
+Oltre il 60% degli enti non profit offre servizi alla persona, spesso rivolti a soggetti in condizione di fragilità: persone con disabilità, anziani soli, minori a rischio, migranti, disoccupati di lungo corso. Grazie a strutture come centri diurni, case famiglia, mense solidali, sportelli di ascolto e progetti di inserimento lavorativo, il Terzo Settore garantisce accesso a diritti fondamentali come salute, istruzione e dignità.
 
 
-B (Breve): Da eseguire entro 10 giorni.
 
+Esempi concreti parlano chiaro. Come La Locanda dei Girasoli a Roma, ristorante gestito da una cooperativa sociale che impiega giovani con sindrome di Down. O come i progetti di housing sociale, i laboratori protetti, le fattorie didattiche: ogni iniziativa contribuisce a rimuovere ostacoli sociali e culturali, costruendo comunità più inclusive.
 
 
-D (Differibile): Da eseguire entro 30 giorni (per le visite) o 60 giorni (per gli esami strumentali).
 
 
 
-P (Programmata): Da eseguire entro 120 giorni, per controlli programmati.
 
 
+Terzo Settore e economia territoriale
 
-Conoscere questi codici ti aiuta a comprendere le tempistiche previste e a monitorare che vengano rispettate. L'impegnativa ha una validitÃ  limitata, solitamente un anno, quindi Ã¨ importante non lasciarla "scadere" nel cassetto.
 
 
 
-3. Prenotare Visite ed Esami: Il Percorso del Paziente
 
-Una volta ottenuta l'impegnativa, Ã¨ il momento di prenotare. Il sistema per farlo si chiama CUP (Centro Unico di Prenotazione) ed Ã¨ accessibile attraverso diverse modalitÃ .
 
 
+Il Terzo Settore non è solo welfare: è anche economia territoriale, innovazione e rigenerazione urbana. Le cooperative di comunità, per esempio, stanno trasformando piccoli borghi italiani in laboratori di resilienza: producono energia, gestiscono negozi, attivano turismo sostenibile. Sono oltre 300 in tutto il Paese, spesso nate per contrastare lo spopolamento delle aree interne.
 
-CUP Telefonico: Ogni regione ha un numero verde dedicato. Ãˆ il metodo tradizionale, ma puÃ² richiedere pazienza a causa delle attese.
 
 
+Un altro esempio emblematico è il progetto Libera Terra che trasforma i terreni confiscati alle mafie in aziende agricole etiche e biologiche. Oggi la rete gestisce più di 1.400 ettari tra Sicilia, Calabria, Campania e Puglia, dando lavoro e speranza in territori segnati dall’illegalità.
 
-Sportelli CUP: Puoi recarti di persona presso gli sportelli dell'ASL o degli ospedali. Molte farmacie offrono oggi un servizio di prenotazione CUP, rendendo l'accesso ancora piÃ¹ capillare.
 
 
+Nelle città, esperienze come le Case del Quartiere di Torino dimostrano come si possa rigenerare il patrimonio pubblico abbandonato e creare spazi comunitari multifunzionali, grazie a modelli di governance condivisa tra enti locali e associazioni.
 
-CUP Online: La via piÃ¹ moderna e comoda. Attraverso il sito della tua regione o, meglio ancora, tramite il Fascicolo Sanitario Elettronico, puoi visualizzare le disponibilitÃ  in tempo reale, prenotare, spostare o annullare un appuntamento in totale autonomia, 24 ore su 24.
 
 
 
-Per prenotare, tieni sempre a portata di mano l'impegnativa (in particolare il numero NRE) e la tua Tessera Sanitaria.
 
 
 
-4. Il Pagamento del Ticket Sanitario
+Terzo Settore e istituzioni pubbliche
 
-Per molte prestazioni specialistiche ed esami diagnostici, il SSN richiede una compartecipazione alla spesa da parte del cittadino: il ticket. L'importo varia da regione a regione e in base al tipo di prestazione.
 
 
 
-Tuttavia, esistono delle esenzioni per determinate categorie di cittadini, principalmente per motivi di reddito o per la presenza di patologie croniche o rare. Ãˆ il tuo medico di base a certificare il tuo diritto all'esenzione, riportando l'apposito codice sull'impegnativa. Se pensi di averne diritto, parlane con lui.
 
 
 
-Il pagamento del ticket puÃ² essere effettuato in diversi modi:
+Il Terzo Settore oggi non è più solo “fornitore di servizi”, ma è diventato un partner strategico della pubblica amministrazione. La riforma del 2017 ha introdotto strumenti come la co-programmazione e la co-progettazione, che permettono a enti pubblici e organizzazioni non profit di pianificare insieme interventi sociali, condividendo obiettivi e risorse.
 
 
 
-Presso gli sportelli della struttura sanitaria prima di effettuare la prestazione.
+Comuni come Bologna, Torino, Milano stanno già sperimentando questo modello, con risultati positivi in termini di efficacia e partecipazione. Anche il PNRR prevede il coinvolgimento del Terzo Settore nella realizzazione di progetti di inclusione e coesione.
 
 
 
-Tramite i totem multifunzione presenti in molti ospedali.
+Inoltre, crescono le partnership tra mondo profit e non profit, con aziende che sostengono iniziative sociali e fondazioni bancarie che finanziano progetti in ambito educativo, culturale e sanitario.
 
 
 
-Online, tramite il sistema pagoPA.
 
 
 
-Presso punti di pagamento autorizzati (es. tabaccherie con servizio Lottomatica/Sisal).
 
+Le sfide del Terzo Settore: volontariato, risorse e burocrazia
 
 
-Ricorda sempre di conservare la ricevuta di pagamento.
 
 
 
-5. Il Fascicolo Sanitario Elettronico (FSE): La Tua Salute a Portata di Click
 
-Se c'Ã¨ uno strumento che ha rivoluzionato l'accesso all'assistenza sanitaria, Ã¨ il Fascicolo Sanitario Elettronico (FSE). Si tratta di un archivio digitale personale che raccoglie tutta la tua storia clinica in un unico luogo sicuro e accessibile.
 
+Nonostante la sua importanza, il Terzo Settore italiano deve affrontare problemi strutturali che rischiano di comprometterne la sostenibilità.
 
 
-Cosa trovi nel tuo FSE?
 
+Calo del volontariato
 
 
-Referti di esami e visite.
 
+Negli ultimi anni, il numero di volontari è diminuito di oltre il 16%. Le nuove generazioni partecipano meno, anche per mancanza di modelli organizzativi flessibili. Serve un rilancio del volontariato, magari più episodico o digitale, che intercetti i nuovi stili di vita dei giovani.
 
 
-Prescrizioni di farmaci e impegnative.
 
 
 
-Certificati vaccinali.
 
 
+Fragilità economica
 
-Lettere di dimissione ospedaliera.
 
 
+Il 60% degli enti ha un budget annuo inferiore ai 30.000 euro. Molti sopravvivono grazie a bandi a breve termine, donazioni o 5x1000. Occorre lavorare su modelli economici più sostenibili, diversificando le entrate e rafforzando il fundraising.
 
-PerchÃ© attivarlo? I vantaggi sono enormi. Puoi consultare i tuoi referti senza dover tornare in struttura, mostrare la tua storia clinica a un nuovo specialista con un semplice click, scaricare le impegnative senza bisogno della stampa del medico e gestire le tue prenotazioni. Per attivarlo, solitamente basta accedere al portale della sanitÃ  della tua regione con SPID o CIE.
 
 
 
-Conclusione: Un Paziente Informato Ã¨ un Paziente piÃ¹ Forte
 
-Navigare il Servizio Sanitario Nazionale non deve essere un'esperienza frustrante. Comprendere il ruolo del medico di base, il significato di un'impegnativa, le modalitÃ  di prenotazione e le potenzialitÃ  del Fascicolo Sanitario Elettronico trasforma il sistema da un labirinto a una rete di supporto.
 
 
+Professionalizzazione e capitale umano
 
-Essere un paziente informato significa prendere il controllo del proprio percorso di salute, dialogare efficacemente con i professionisti e utilizzare al meglio le risorse che lo Stato ci mette a disposizione. Non esitare a chiedere aiuto al tuo medico o agli sportelli informativi della tua ASL. Prendersi cura della propria salute Ã¨ un diritto e un percorso che si affronta con maggiore serenitÃ  quando si conoscono gli strumenti a disposizione.
 
+
+Il Terzo Settore ha bisogno di competenze nuove, dalla progettazione all’uso di strumenti digitali. È necessario investire nella formazione continua e favorire l’ingresso di giovani e donne nei ruoli chiave.
+
+
+
+Burocrazia e diseguaglianze territoriali
+
+
+
+La riforma ha aumentato gli adempimenti: trasparenza, assicurazioni, rendicontazioni. Questo carico burocratico penalizza soprattutto gli enti più piccoli. Inoltre, il Terzo Settore è ancora troppo concentrato al Nord. Serve un rafforzamento delle realtà meridionali, con politiche mirate e risorse dedicate.
+
+
+
+
+
+
+
+Terzo settore: un patrimonio da sostenere
+
+
+
+
+
+
+
+Il Terzo Settore in Italia è un motore di coesione sociale, innovazione e sviluppo territoriale. Grazie a migliaia di progetti e milioni di cittadini attivi, contribuisce ogni giorno a rendere il nostro Paese più solidale, più giusto e più resiliente.
+
+
+
+Ma per garantire continuità e crescita a questo patrimonio, servono politiche di sostegno stabili, collaborazione vera con le istituzioni e un riconoscimento concreto del suo ruolo strategico. Investire sul Terzo Settore significa investire nel capitale umano e sociale dell’Italia.
