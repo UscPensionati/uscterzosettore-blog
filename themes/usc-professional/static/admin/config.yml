@@ -7,7 +7,7 @@ public_folder: "/images/uploads"
 
 site_url: https://uscterzosettore.it
 display_url: https://uscterzosettore.it
-logo_url: /images/usc-logo.svg
+logo_url: /images/logo-usc.png
 
 show_preview_links: true
 publish_mode: editorial_workflow
