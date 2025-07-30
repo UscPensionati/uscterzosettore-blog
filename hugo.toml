@@ -211,3 +211,41 @@ relativeURLs = false
   [module.hugoVersion]
     extended = false
     min = '0.112.0'
+
+# Sostituisci la sezione [params.all_categories] nel tuo hugo.toml con questa:
+
+# Configurazione categorie - SINTASSI TOML CORRETTA
+[[params.all_categories.list]]
+name = "Agricoltura Sociale"
+image = "/images/categories/agricoltura-sociale.jpg"
+description = "Progetti e iniziative che uniscono agricoltura e inclusione sociale"
+
+[[params.all_categories.list]]
+name = "Assistenza Sanitaria"
+image = "/images/categories/assistenza-sanitaria.jpg"
+description = "Supporto sanitario e servizi per il benessere della comunità"
+
+[[params.all_categories.list]]
+name = "Donazioni"
+image = "/images/categories/donazioni.jpg"
+description = "Iniziative di raccolta fondi e supporto alla comunità"
+
+[[params.all_categories.list]]
+name = "Giovani Idee"
+image = "/images/categories/giovani-idee.jpg"
+description = "Progetti innovativi e iniziative dei giovani per la comunità"
+
+[[params.all_categories.list]]
+name = "News"
+image = "/images/categories/news.jpg"
+description = "Ultime notizie e aggiornamenti dal mondo del terzo settore"
+
+[[params.all_categories.list]]
+name = "Patronato"
+image = "/images/categories/patronato.jpg"
+description = "Servizi di patronato e assistenza per pratiche burocratiche"
+
+[[params.all_categories.list]]
+name = "Tutela Legale"
+image = "/images/categories/tutela-legale.jpg"
+description = "Supporto legale e consulenza per diritti e normative"

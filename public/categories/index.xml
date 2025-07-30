@@ -15,5 +15,47 @@
       <guid>https://uscterzosettore.it/categories/news/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Agricoltura Sociale</title>
+      <link>https://uscterzosettore.it/categories/agricoltura-sociale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://uscterzosettore.it/categories/agricoltura-sociale/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Assistenza Sanitaria</title>
+      <link>https://uscterzosettore.it/categories/assistenza-sanitaria/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://uscterzosettore.it/categories/assistenza-sanitaria/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Donazioni</title>
+      <link>https://uscterzosettore.it/categories/donazioni/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://uscterzosettore.it/categories/donazioni/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Giovani Idee</title>
+      <link>https://uscterzosettore.it/categories/giovani-idee/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://uscterzosettore.it/categories/giovani-idee/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Patronato</title>
+      <link>https://uscterzosettore.it/categories/patronato/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://uscterzosettore.it/categories/patronato/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutela Legale</title>
+      <link>https://uscterzosettore.it/categories/tutela-legale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://uscterzosettore.it/categories/tutela-legale/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
