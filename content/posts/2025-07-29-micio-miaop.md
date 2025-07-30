@@ -1,6 +1,6 @@
 ---
 title: "Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future"
-date: 2025-07-30T12:04:00+02:00
+date: 2025-07-30T12:08:00+02:00
 categories: News
 cover:
   image: https://cdn.pixabay.com/photo/2024/11/18/10/20/businessman-9205819_1280.png
