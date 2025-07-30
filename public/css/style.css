@@ -487,6 +487,8 @@ select {
 .mobile-nav-menu {
   list-style: none;
   padding: var(--space-4) 0;
+  max-height: 450px;
+  overflow-y: scroll;
 }
 
 .mobile-nav-menu li {
@@ -558,7 +560,8 @@ select {
 }
 
 .mobile-dropdown-menu.active {
-  max-height: 550px;
+  max-height: 240px;
+  overflow-y: auto;
 }
 
 .mobile-dropdown-menu a {
@@ -1320,6 +1323,10 @@ select {
 
   .main-navigation {
     display: none;
+  }
+
+  .subscribe-btn{
+    
   }
 
   .mobile-menu-toggle {
