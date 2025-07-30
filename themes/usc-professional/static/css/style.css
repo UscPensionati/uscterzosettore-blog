@@ -950,11 +950,6 @@ select {
   margin-bottom: var(--space-4);
 }
 
-/* Topics Section */
-.topics-section {
-  /* Styling similar to about-section if needed */
-}
-
 .topics-title {
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
@@ -969,11 +964,6 @@ select {
   flex-direction: column;
   gap: var(--space-3);
 }
-
-.topic-item {
-  /* Add styles as needed */
-}
-
 
 .topic-link {
   display: flex;
