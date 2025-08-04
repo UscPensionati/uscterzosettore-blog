@@ -1,14 +1,19 @@
 ---
-title: "Il Terzo Settore in Italia"
-date: 2025-07-30T13:11:00+02:00
 draft: false
-categories: ["News"]
+title: Il Terzo Settore in Italia
+date: 2025-07-30T13:11:00+02:00
+categories:
+  - News
 cover:
-  image: "https://www.noiverona.com/wp-content/uploads/2019/11/TERZO-SETTORE.jpg"
-  alt: "Immagine rappresentativa del Terzo Settore"
-description: "Un approfondimento sul ruolo del Terzo Settore in Italia e il suo impatto sociale ed economico."
-author: "Redazione USC"
-tags: ["terzo settore", "sociale", "volontariato"]
+  image: /images/uploads/progetto-senza-titolo.png
+  alt: Immagine rappresentativa del Terzo Settore
+description: Un approfondimento sul ruolo del Terzo Settore in Italia e il suo
+  impatto sociale ed economico.
+author: Redazione USC
+tags:
+  - terzo settore
+  - sociale
+  - volontariato
 ---
 
 Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future
