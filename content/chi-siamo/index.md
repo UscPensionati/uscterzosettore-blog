@@ -1,5 +1,5 @@
 ﻿---
-title: "Chi Siamo"
+title: "Chi siamo"
 date: 2024-07-29
 draft: false
 type: "page"

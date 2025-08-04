@@ -225,10 +225,11 @@ name = "Assistenza Sanitaria"
 image = "/images/categories/assistenza-sanitaria.jpg"
 description = "Supporto sanitario e servizi per il benessere della comunità"
 
-[[params.all_categories.list]]
-name = "Donazioni"
-image = "/images/categories/donazioni.jpg"
-description = "Iniziative di raccolta fondi e supporto alla comunità"
+# Questa categoria non è più necessaria, ma dovra diventare una sezione fine a se stessa nella barra di navigazione
+# [[params.all_categories.list]]
+# name = "Donazioni"
+# image = "/images/categories/donazioni.jpg"
+# description = "Iniziative di raccolta fondi e supporto alla comunità"
 
 [[params.all_categories.list]]
 name = "Giovani Idee"

@@ -1033,7 +1033,7 @@ select {
 .newsletter-title {
   font-size: var(--text-4xl);
   font-weight: var(--weight-bold);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-3);
   color: var(--color-bg);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
@@ -2290,7 +2290,7 @@ select {
   gap: var(--space-6);
   padding: var(--space-8) 0;
   border-bottom: 1px solid var(--color-border);
-  align-items: start;
+  align-items: center;
 }
 
 .post-list-item:last-child {
@@ -4586,7 +4586,7 @@ input:checked+.slider:before {
 .newsletter-title {
   font-size: var(--text-xl);
   font-weight: var(--weight-bold);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
   position: relative;
   z-index: 1;
 }
