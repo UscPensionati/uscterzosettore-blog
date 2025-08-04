@@ -2750,7 +2750,7 @@ select {
 
 .post-card {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 10fr;
   gap: 1.5rem;
   padding: 2rem 0;
   border-bottom: 1px solid var(--color-border);
