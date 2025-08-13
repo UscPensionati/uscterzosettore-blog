@@ -5,7 +5,7 @@ date: 2025-08-04T10:53:00+0200
 categories:
   - News
 cover:
-  image: /images/uploads/progetto-senza-titolo.png
+  image: /images/uploads/prima-foto-usc-blog-1-.png
 description: ""
 author: Redazione USC
 ---
