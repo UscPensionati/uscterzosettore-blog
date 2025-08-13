@@ -5,7 +5,7 @@ date: 2025-08-04T10:57:00+0200
 categories:
   - News
 cover:
-  image: /images/uploads/progetto-senza-titolo.png
+  image: /images/uploads/usc-agenda-2030-blog.png
 author: Redazione USC
 ---
 Nel settembre del 2015, 193 Paesi membri delle Nazioni Unite firmarono un patto ambizioso: un piano per trasformare il mondo entro il 2030. Lo chiamarono Agenda 2030 per lo Sviluppo Sostenibile. Un nome che può sembrare tecnico, distante. In realtà, quei 17 obiettivi globali, noti come Sustainable Development Goals, o SDGs, parlano direttamente alla vita quotidiana di milioni di persone: combattere la povertà, garantire istruzione di qualità, ridurre le disuguaglianze, proteggere il pianeta.
