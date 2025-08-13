@@ -5,7 +5,7 @@ date: 2025-08-04T10:57:00+0200
 categories:
   - News
 cover:
-  image: /images/uploads/usc-agenda-2030-blog.png
+  image: ""
 author: Redazione USC
 ---
 ![](/images/uploads/usc-agenda-2030-blog.png)
