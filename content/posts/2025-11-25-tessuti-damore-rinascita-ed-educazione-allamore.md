@@ -4,7 +4,7 @@ date: 2025-11-25T09:13:00+0100
 categories:
   - Giovani Idee
 cover:
-  image: /images/uploads/e1297e53-fa6d-4e2f-8153-993dc56fe71d.png
+  image: /images/uploads/screenshot-2025-11-25-alle-13.22.01.png
 author: Redazione USC
 ---
 **“Tessuti d’Amore”** è un progetto che nasce dal desiderio di riportare al centro **una riflessione profonda sul significato autentico dell’amore e delle relazioni**, lontano dalle narrazioni idealizzate e dai modelli tossici che spesso contribuiscono a generare dipendenza, annullamento personale e, nei casi più gravi, violenza fisica, psicologica o economica.
