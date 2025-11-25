@@ -175,7 +175,7 @@
               <h2 class="post-list-title">
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
               </h2>
-              <p class="post-list-excerpt">{{ .Summary | truncate 150 }}</p>
+             <p class="post-list-excerpt">{{ .Plain | truncate 150 }}</p>
             </div>
             {{ if .Params.cover.image }}
               <div class="post-list-image">

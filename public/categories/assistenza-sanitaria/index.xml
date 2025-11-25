@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assistenza Sanitaria on USC Ente del Terzo Settore</title>
-    <link>https://uscterzosettore.it/categories/assistenza-sanitaria/</link>
+    <link>http://localhost:1313/categories/assistenza-sanitaria/</link>
     <description>Recent content in Assistenza Sanitaria on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <atom:link href="https://uscterzosettore.it/categories/assistenza-sanitaria/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/assistenza-sanitaria/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

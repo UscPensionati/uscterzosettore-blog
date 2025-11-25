@@ -2,67 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://uscterzosettore.it/posts/2025/08/agenda-2030-e-terzo-settore-il-ruolo-delle-realt%C3%A0-sociali-per-lo-sviluppo-sostenibile/</loc>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-11-25T14:31:32+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-11-25T14:31:32+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2025/11/tessuti-damore-rinascita-ed-educazione-allamore/</loc>
+    <lastmod>2025-11-25T14:31:32+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-25T14:31:32+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2025/08/agenda-2030-e-terzo-settore-il-ruolo-delle-realt%C3%A0-sociali-per-lo-sviluppo-sostenibile/</loc>
     <lastmod>2025-08-04T10:57:00+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/</loc>
+    <loc>http://localhost:1313/posts/2025/08/terzo-settore-e-digitale-come-le-tecnologie-stanno-cambiando-il-mondo-non-profit/</loc>
+    <lastmod>2025-08-13T09:35:50+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2025/07/il-terzo-settore-in-italia/</loc>
     <lastmod>2025-08-04T09:07:31+00:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/posts/</loc>
+    <loc>http://localhost:1313/tags/sociale/</loc>
     <lastmod>2025-08-04T09:07:31+00:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-08-04T09:07:31+00:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/posts/2025/08/terzo-settore-e-digitale-come-le-tecnologie-stanno-cambiando-il-mondo-non-profit/</loc>
-    <lastmod>2025-08-04T08:56:34+00:00</lastmod>
-  </url><url>
-    <loc>https://uscterzosettore.it/posts/2025/07/il-terzo-settore-in-italia/</loc>
+    <loc>http://localhost:1313/tags/terzo-settore/</loc>
     <lastmod>2025-08-04T09:07:31+00:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/tags/sociale/</loc>
+    <loc>http://localhost:1313/tags/volontariato/</loc>
     <lastmod>2025-08-04T09:07:31+00:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/tags/</loc>
-    <lastmod>2025-08-04T09:07:31+00:00</lastmod>
-  </url><url>
-    <loc>https://uscterzosettore.it/tags/terzo-settore/</loc>
-    <lastmod>2025-08-04T09:07:31+00:00</lastmod>
-  </url><url>
-    <loc>https://uscterzosettore.it/tags/volontariato/</loc>
-    <lastmod>2025-08-04T09:07:31+00:00</lastmod>
-  </url><url>
-    <loc>https://uscterzosettore.it/contatti/</loc>
+    <loc>http://localhost:1313/contatti/</loc>
     <lastmod>2025-07-29T23:12:24+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/cookie-policy/</loc>
+    <loc>http://localhost:1313/cookie-policy/</loc>
     <lastmod>2025-07-30T00:09:47+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/privacy/</loc>
+    <loc>http://localhost:1313/privacy/</loc>
     <lastmod>2025-07-30T00:09:47+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/chi-siamo/</loc>
+    <loc>http://localhost:1313/chi-siamo/</loc>
     <lastmod>2025-08-04T10:32:45+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/agricoltura-sociale/</loc>
+    <loc>http://localhost:1313/categories/agricoltura-sociale/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/assistenza-sanitaria/</loc>
+    <loc>http://localhost:1313/categories/assistenza-sanitaria/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/donazioni/</loc>
+    <loc>http://localhost:1313/categories/donazioni/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/giovani-idee/</loc>
+    <loc>http://localhost:1313/categories/giovani-idee/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/news/</loc>
+    <loc>http://localhost:1313/categories/news/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/patronato/</loc>
+    <loc>http://localhost:1313/categories/patronato/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url><url>
-    <loc>https://uscterzosettore.it/categories/tutela-legale/</loc>
+    <loc>http://localhost:1313/categories/tutela-legale/</loc>
     <lastmod>2025-07-30T23:09:12+02:00</lastmod>
   </url>
 </urlset>

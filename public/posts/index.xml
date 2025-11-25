@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on USC Ente del Terzo Settore</title>
-    <link>https://uscterzosettore.it/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on USC Ente del Terzo Settore</description>
     <generator>Hugo</generator>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 04 Aug 2025 09:07:31 +0000</lastBuildDate>
-    <atom:link href="https://uscterzosettore.it/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Nov 2025 14:31:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tessuti d&#39;amore: rinascita ed educazione all&#39;amore</title>
+      <link>http://localhost:1313/posts/2025/11/tessuti-damore-rinascita-ed-educazione-allamore/</link>
+      <pubDate>Tue, 25 Nov 2025 09:13:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/2025/11/tessuti-damore-rinascita-ed-educazione-allamore/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/uploads/screenshot-2025-11-25-alle-13.22.01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;“Tessuti d’Amore”&lt;/strong&gt; è un progetto che nasce dal desiderio di riportare al centro &lt;strong&gt;una riflessione profonda sul significato autentico dell’amore e delle relazioni&lt;/strong&gt;, lontano dalle narrazioni idealizzate e dai modelli tossici che spesso contribuiscono a generare dipendenza, annullamento personale e, nei casi più gravi, violenza fisica, psicologica o economica.&lt;/p&gt;&#xA;&lt;p&gt;L’iniziativa prende forma dall’incontro &lt;strong&gt;con la storia straordinaria di Mayra Sallie&lt;/strong&gt;, modella e studentessa dell’Accademia di Belle Arti di Frosinone. Nata e cresciuta nelle favelas di Rio de Janeiro, Mayra scopre fin da giovanissima la passione per la moda sostenibile e impara a valorizzare i capi di seconda mano, trasformando con creatività ciò che molti considererebbero materiale di scarto. Dopo il diploma in moda presso FAETEC, avvia un progetto &lt;strong&gt;di recupero dei rifiuti di jeans&lt;/strong&gt; collaborando anche con brand come Levi’s ed Hering, contribuendo alla diffusione di una cultura della moda attenta all’ambiente.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Agenda 2030 e Terzo Settore: il ruolo delle realtà sociali per lo sviluppo sostenibile</title>
-      <link>https://uscterzosettore.it/posts/2025/08/agenda-2030-e-terzo-settore-il-ruolo-delle-realt%C3%A0-sociali-per-lo-sviluppo-sostenibile/</link>
+      <link>http://localhost:1313/posts/2025/08/agenda-2030-e-terzo-settore-il-ruolo-delle-realt%C3%A0-sociali-per-lo-sviluppo-sostenibile/</link>
       <pubDate>Mon, 04 Aug 2025 10:57:00 +0200</pubDate>
-      <guid>https://uscterzosettore.it/posts/2025/08/agenda-2030-e-terzo-settore-il-ruolo-delle-realt%C3%A0-sociali-per-lo-sviluppo-sostenibile/</guid>
+      <guid>http://localhost:1313/posts/2025/08/agenda-2030-e-terzo-settore-il-ruolo-delle-realt%C3%A0-sociali-per-lo-sviluppo-sostenibile/</guid>
       <description>&lt;p&gt;Nel settembre del 2015, 193 Paesi membri delle Nazioni Unite firmarono un patto ambizioso: un piano per trasformare il mondo entro il 2030. Lo chiamarono Agenda 2030 per lo Sviluppo Sostenibile. Un nome che può sembrare tecnico, distante. In realtà, quei 17 obiettivi globali, noti come Sustainable Development Goals, o SDGs, parlano direttamente alla vita quotidiana di milioni di persone: combattere la povertà, garantire istruzione di qualità, ridurre le disuguaglianze, proteggere il pianeta.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Terzo Settore e digitale: come le tecnologie stanno cambiando il mondo non profit</title>
-      <link>https://uscterzosettore.it/posts/2025/08/terzo-settore-e-digitale-come-le-tecnologie-stanno-cambiando-il-mondo-non-profit/</link>
+      <link>http://localhost:1313/posts/2025/08/terzo-settore-e-digitale-come-le-tecnologie-stanno-cambiando-il-mondo-non-profit/</link>
       <pubDate>Mon, 04 Aug 2025 10:53:00 +0200</pubDate>
-      <guid>https://uscterzosettore.it/posts/2025/08/terzo-settore-e-digitale-come-le-tecnologie-stanno-cambiando-il-mondo-non-profit/</guid>
+      <guid>http://localhost:1313/posts/2025/08/terzo-settore-e-digitale-come-le-tecnologie-stanno-cambiando-il-mondo-non-profit/</guid>
       <description>&lt;h2 id=&#34;la-rivoluzione-invisibile&#34;&gt;La rivoluzione invisibile&lt;/h2&gt;&#xA;&lt;p&gt;Nel cuore dell’Italia solidale, qualcosa sta cambiando senza fare troppo rumore. Non si tratta solo di nuovi progetti sociali o di iniziative solidali, ma di una trasformazione più profonda, più silenziosa eppure dirompente: quella digitale. Le tecnologie, da anni alleate delle imprese e delle pubbliche amministrazioni, stanno ridefinendo anche il volto del Terzo Settore. Oggi, essere connessi non significa soltanto “essere online”, ma vuol dire &lt;strong&gt;essere rilevanti, efficienti e trasparenti&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Il Terzo Settore in Italia</title>
-      <link>https://uscterzosettore.it/posts/2025/07/il-terzo-settore-in-italia/</link>
+      <link>http://localhost:1313/posts/2025/07/il-terzo-settore-in-italia/</link>
       <pubDate>Wed, 30 Jul 2025 13:11:00 +0200</pubDate>
-      <guid>https://uscterzosettore.it/posts/2025/07/il-terzo-settore-in-italia/</guid>
+      <guid>http://localhost:1313/posts/2025/07/il-terzo-settore-in-italia/</guid>
       <description>&lt;p&gt;Il Terzo Settore in Italia: motore sociale, sviluppo locale e sfide future&lt;/p&gt;&#xA;&lt;p&gt;In Italia il Terzo Settore rappresenta molto più di un insieme di associazioni e cooperative: è un pilastro del welfare, un attore economico rilevante e una rete di solidarietà che tiene insieme la società. Con oltre 360 mila enti non profit, quasi 900 mila lavoratori e più di 4,5 milioni di volontari, il Terzo Settore incide profondamente sulla vita quotidiana delle persone e contribuisce al 4,4% del PIL nazionale.&lt;/p&gt;</description>
     </item>
   </channel>
