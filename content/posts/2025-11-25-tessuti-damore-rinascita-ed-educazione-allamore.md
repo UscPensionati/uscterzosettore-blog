@@ -7,10 +7,6 @@ cover:
   image: /images/uploads/screenshot-2025-11-25-alle-13.22.01.png
 author: Redazione USC
 ---
-![](/images/uploads/screenshot-2025-11-25-alle-13.22.01.png)
-
-
-
 **“Tessuti d’Amore”** è un progetto che nasce dal desiderio di riportare al centro **una riflessione profonda sul significato autentico dell’amore e delle relazioni**, lontano dalle narrazioni idealizzate e dai modelli tossici che spesso contribuiscono a generare dipendenza, annullamento personale e, nei casi più gravi, violenza fisica, psicologica o economica.
 
 L’iniziativa prende forma dall’incontro **con la storia straordinaria di Mayra Sallie**, modella e studentessa dell’Accademia di Belle Arti di Frosinone. Nata e cresciuta nelle favelas di Rio de Janeiro, Mayra scopre fin da giovanissima la passione per la moda sostenibile e impara a valorizzare i capi di seconda mano, trasformando con creatività ciò che molti considererebbero materiale di scarto. Dopo il diploma in moda presso FAETEC, avvia un progetto **di recupero dei rifiuti di jeans** collaborando anche con brand come Levi’s ed Hering, contribuendo alla diffusione di una cultura della moda attenta all’ambiente.
