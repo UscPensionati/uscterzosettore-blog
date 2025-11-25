@@ -7,7 +7,7 @@ cover:
   image: /images/uploads/e1297e53-fa6d-4e2f-8153-993dc56fe71d.png
 author: Redazione USC
 ---
-![](/images/uploads/e1297e53-fa6d-4e2f-8153-993dc56fe71d.png "Mayra Sallie nella sua Rio")
+![]( "Mayra Sallie nella sua Rio")
 
 **“Tessuti d’Amore”** è un progetto che nasce dal desiderio di riportare al centro **una riflessione profonda sul significato autentico dell’amore e delle relazioni**, lontano dalle narrazioni idealizzate e dai modelli tossici che spesso contribuiscono a generare dipendenza, annullamento personale e, nei casi più gravi, violenza fisica, psicologica o economica.
 
