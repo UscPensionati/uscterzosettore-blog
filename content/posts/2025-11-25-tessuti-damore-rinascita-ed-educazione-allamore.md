@@ -15,6 +15,8 @@ L’iniziativa prende forma dall’incontro **con la storia straordinaria di May
 
 Quest’anno, in occasione del suo matrimonio, Mayra **decide di disegnare e cucire da sola il proprio abito da sposa**, utilizzando materiali poveri, naturali e recuperati. 
 
+![](/images/uploads/photo-2025-08-25-14-44-34.jpg)
+
 Un gesto che rappresenta l’idea da cui nasce tessuti d’amore: così come un tessuto può essere ricucito e trasformato in qualcosa di unico, **anche una donna può ritrovare pezzo dopo pezzo la propria identità, la propria dignità e la propria forza** dopo una situazione di violenza o oppressione. L’amore autentico non scarta, non cancella e non distrugge, ma ripara, sostiene e costruisce.
 
 “Tessuti d’Amore” vuole diffondere una cultura dell’affettività più **matura, reale e consapevole.** Amare non significa aderire a un modello romantico perfetto e privo di conflitti, ma riconoscere bisogni e limiti reciproci, saper ascoltare, crescere insieme, preservare la propria identità e mantenere confini sani. In molte storie di violenza è proprio il rapporto di coppia – e spesso il matrimonio – a diventare il luogo in cui la donna perde progressivamente libertà, autostima e sicurezza. Per questo il progetto punta sulla **prevenzione, rafforzando la consapevolezza personale e gli strumenti per riconoscere relazioni non equilibrate prima che la violenza si manifesti.**
