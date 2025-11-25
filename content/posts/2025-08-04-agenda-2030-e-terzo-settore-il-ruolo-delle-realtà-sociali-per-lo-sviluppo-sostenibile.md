@@ -8,6 +8,8 @@ cover:
   image: /images/uploads/usc-agenda-2030-blog.png
 author: Redazione USC
 ---
+![](/images/uploads/usc-agenda-2030-blog.png)
+
 Nel settembre del 2015, 193 Paesi membri delle Nazioni Unite firmarono un patto ambizioso: un piano per trasformare il mondo entro il 2030. Lo chiamarono Agenda 2030 per lo Sviluppo Sostenibile. Un nome che può sembrare tecnico, distante. In realtà, quei 17 obiettivi globali, noti come Sustainable Development Goals, o SDGs, parlano direttamente alla vita quotidiana di milioni di persone: combattere la povertà, garantire istruzione di qualità, ridurre le disuguaglianze, proteggere il pianeta.
 
 Ma dietro le sigle e i documenti ufficiali, c’è una domanda essenziale: **chi può davvero contribuire a realizzare tutto questo?** La risposta è semplice, anche se spesso sottovalutata: **il Terzo Settore**. Quelle migliaia di organizzazioni che ogni giorno, lontano dai riflettori, lavorano nelle periferie, nei borghi, nei centri d’accoglienza e nei progetti educativi. È in questo tessuto diffuso che l’Agenda 2030 trova il suo motore più concreto.
